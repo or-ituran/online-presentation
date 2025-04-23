@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שילוב בינה מלאכותית בתהליכי פיתוח התוכנה של איתוראן</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css">
+
+    <style>
+        :root {
+            --ituran-primary: #0056b3;
+            --ituran-secondary: #00376e;
+            --ituran-accent: #ff6b00;
+            --ituran-light: #f5f7fa;
+            --ituran-dark: #333;
+            --ituran-success: #28a745;
+            --ituran-warning: #ffc107;
+            --ituran-danger: #dc3545;
+        }
+
+        .reveal {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--ituran-dark);
+            font-size: calc(0.8em + 0.5vw);
+            line-height: 1.4;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .reveal h1,
+        .reveal h2,
+        .reveal h3,
+        .reveal h4 {
+            color: var(--ituran-primary);
+            font-weight: 600;
+            margin-bottom: 0.4em;
+            line-height: 1.2;
+            text-align: right;
+        }
+
+        .reveal h1 {
+            font-size: calc(1.8em + 1.2vw);
+        }
+
+        .reveal h2 {
+            font-size: calc(1.4em + 0.8vw);
+        }
+
+        .reveal h3 {
+            font-size: calc(1.1em + 0.5vw);
+            color: var(--ituran-secondary);
+        }
+
+        .reveal h4 {
+            font-size: calc(1em + 0.3vw);
+            color: var(--ituran-secondary);
+        }
+
+        .reveal ul,
+        .reveal ol {
+            display: block;
+            margin-right: 1.5em;
+            margin-left: 0;
+            font-size: calc(0.85em + 0.4vw);
+            text-align: right;
+        }
+
+        .reveal li {
+            margin-bottom: 0.5em;
+        }
+
+        .reveal p {
+            font-size: calc(0.85em + 0.4vw);
+        }
+
+        .reveal .slides {
+            text-align: right;
+        }
+
+        .reveal .slides section {
+            padding: calc(10px + 1vw);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title-slide {
+            text-align: center;
+        }
+
+        .title-slide h1 {
+            font-size: 2.5em;
+            color: #0056b3;
+            margin-bottom: 0.3em;
+        }
+
+        .title-slide h2 {
+            font-size: 1.8em;
+            color: #00376e;
+            margin-bottom: 1em;
+        }
+
+        .subtitle {
+            font-size: 1.4em;
+            color: #666;
+            margin-bottom: 2em;
+        }
+
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: calc(10px + 1vw);
+            direction: rtl;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 45%;
+            padding: 0 calc(8px + 0.5vw);
+            text-align: right;
+        }
+
+        .highlight-box,
+        .success-box,
+        .warning-box,
+        .danger-box {
+            background-color: rgba(0, 86, 179, 0.1);
+            border-left: 4px solid var(--ituran-primary);
+            padding: calc(8px + 0.8vw);
+            margin: calc(10px + 0.5vw) 0;
+            border-radius: 4px;
+        }
+
+        .success-box {
+            background-color: rgba(40, 167, 69, 0.1);
+            border-left: 4px solid var(--ituran-success);
+        }
+
+        .warning-box {
+            background-color: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid var(--ituran-warning);
+        }
+
+        .danger-box {
+            background-color: rgba(220, 53, 69, 0.1);
+            border-left: 4px solid var(--ituran-danger);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: calc(15px + 0.5vw);
+        }
+
+        .team-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: calc(10px + 0.5vw);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--ituran-primary);
+        }
+
+        .team-card h4 {
+            margin-top: 0;
+            color: var(--ituran-primary);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: calc(12px + 0.5vw);
+            direction: rtl;
+        }
+
+        .metric-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: calc(10px + 0.5vw);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .metric-card h3 {
+            margin-top: 0;
+            color: var(--ituran-primary);
+        }
+
+        .metric-card .value {
+            font-size: calc(2em + 0.5vw);
+            font-weight: bold;
+            color: var(--ituran-accent);
+            margin: 8px 0;
+        }
+
+        .phase-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: calc(15px + 0.5vw);
+            margin-bottom: calc(15px + 0.5vw);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: right;
+        }
+
+        .phase-card h3 {
+            margin-top: 0;
+            color: var(--ituran-primary);
+            border-bottom: 2px solid var(--ituran-light);
+            padding-bottom: 8px;
+        }
+
+        .footer {
+            font-size: calc(0.7em + 0.3vw);
+            color: #666;
+            text-align: center;
+            margin-top: 1.5em;
+        }
+
+        /* Make sure content fits better on slides */
+        .reveal .slides section {
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
+        }
+
+        /* Better responsive layout for small screens */
+        @media (max-width: 768px) {
+            .two-column {
+                flex-direction: column;
+            }
+
+            .team-grid,
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Title Slide -->
+            <section class="title-slide">
+                <h1>שילוב בינה מלאכותית בתהליכי פיתוח התוכנה</h1>
+                <h2>שיפור הפרודוקטיביות והחדשנות</h2>
+                <p class="subtitle">טרנספורמציה של תהליכי פיתוח באיתוראן טק</p>
+                <p class="presenters">מציגים: הראל ומשה</p>
+                <p class="date">מרץ 2025</p>
+            </section>
+
+            <!-- Executive Overview -->
+            <section>
+                <h2>סקירה מנהלים</h2>
+                <div class="highlight-box">
+                    <p><strong>חזון אסטרטגי:</strong> שיפור יעילות פיתוח התוכנה, חדשנות, ותחרותיות באמצעות שילוב אסטרטגי של בינה מלאכותית בתהליכי הפיתוח של איתוראן.</p>
+                </div>
+                <div class="two-column">
+                    <div class="column">
+                        <h3>יעדים מרכזיים</h3>
+                        <ul>
+                            <li>האצת מהירות הפיתוח בעד 50%</li>
+                            <li>שיפור איכות הקוד ועקביותו</li>
+                            <li>ייעול תהליכי עבודה והפחתת משימות חוזרות</li>
+                            <li>יצירת מדיניות ממשל AI חזקה</li>
+                            <li>יישום תוכניות אינטגרציה ייעודיות לצוותים</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>תוצאות צפויות</h3>
+                        <ul>
+                            <li>קיצור משמעותי בזמן ההגעה לשוק</li>
+                            <li>שיפור באיכות הקוד ותחזוקתיות</li>
+                            <li>ניצול מיטבי של משאבים</li>
+                            <li>שיפור בשיתוף ידע ותיעוד</li>
+                            <li>יתרון תחרותי לטווח ארוך</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Generative AI Foundation -->
+            <section>
+                <h2>יסוד בינה מלאכותית</h2>
+                <div class="two-column">
+                    <div class="column">
+                        <h3>הבנת בינה מלאכותית</h3>
+                        <p>מערכות למידה מתקדמות שיכולות ליצור תוכן חדש ורלוונטי באופן קונטקסטואלי על ידי למידה ממקורות נתונים רבים.</p>
+                        <p><strong>מודלים מרכזיים:</strong> GPT-4o, Claude, Llama</p>
+                    </div>
+                    <div class="column">
+                        <h3>יתרונות אסטרטגיים</h3>
+                        <ul>
+                            <li>מהירות פיתוח משופרת</li>
+                            <li>שיפור איכות הקוד ועקביותו</li>
+                            <li>התמקדות ידע מתקדמת</li>
+                            <li>תהליכי פיתוח מיועדים</li>
+                            <li>ניהול סיכונים והתאמה לחוקים</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strategic Advantages Detail -->
+            <section>
+                <h2>יתרונות אסטרטגיים בפרט</h2>
+                <div class="two-column">
+                    <div class="column">
+                        <div class="success-box">
+                            <h3>מהירות פיתוח משופרת</h3>
+                            <ul>
+                                <li>הפחתה בזמן הניתוק למשימות קוד חוזרות בעד 50%</li>
+                                <li>המרת מפרטי הדרישות למשימות ביצועיות במהירות</li>
+                                <li>שיפור אחוזי השלמת ספרינטים</li>
+                            </ul>
+                        </div>
+                        <div class="success-box">
+                            <h3>שיפור איכות הקוד</h3>
+                            <ul>
+                                <li>התאמה אוטומטית למעבדות קוד</li>
+                                <li>יכולות דיבוג משופרות</li>
+                                <li>הפחתת עומק הבאגים</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="success-box">
+                            <h3>התמקדות ידע</h3>
+                            <ul>
+                                <li>גישה מיידית לתיעוד תחומי</li>
+                                <li>העברת ידע מהירה ואפקטיבית</li>
+                                <li>הפחתת שילובי ידע</li>
+                            </ul>
+                        </div>
+                        <div class="success-box">
+                            <h3>תהליכי עבודה מיועדים</h3>
+                            <ul>
+                                <li>אוטומציה של תהליכים דורשים משאבים רבים</li>
+                                <li>שיפור השלמת אינטגרציה בתהליכי CI/CD</li>
+                                <li>שיפור תדירות הפרסום ואמינותו</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Domain-Specific Applications -->
+            <section>
+                <h2>יישומים מיועדים לתחום</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <h4>ICF Team (Golang)</h4>
+                        <ul>
+                            <li>תיעוד עיצוב מסוגל ל-AI</li>
+                            <li>שיפור טיפול בשגיאות</li>
+                            <li>יצירת בדיקות יחידה אוטומטיות</li>
+                        </ul>
+                    </div>
+                    <div class="team-card">
+                        <h4>Engines Team (C# .NET)</h4>
+                        <ul>
+                            <li>תיעוד לוגיקה עסקית</li>
+                            <li>הפרדה ממונולית למיקרושירותים</li>
+                            <li>בדיקות יחידה אוטומטיות</li>
+                        </ul>
+                    </div>
+                    <div class="team-card">
+                        <h4>BI Team (SQL)</h4>
+                        <ul>
+                            <li>תיעוד של פרוצדורות SQL</li>
+                            <li>אסטרטגיות להתמיכה בביצועים</li>
+                            <li>אפשרויות הפרדה מודולריות</li>
+                        </ul>
+                    </div>
+                    <div class="team-card">
+                        <h4>IWEB Team (C# .Net)</h4>
+                        <ul>
+                            <li>תיעוד API</li>
+                            <li>מסגרות לטיפול בשגיאות</li>
+                            <li>אוטומציה של בדיקות יחידה</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- More Domain-Specific Applications -->
+            <section>
+                <h2>יישומים מיועדים לתחום (המשך)</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <h4>Web Development (React/TypeScript)</h4>
+                        <ul>
+                            <li>יצירת רכיבים אוטומטית</li>
+                            <li>ממשקי TypeScript</li>
+                            <li>המלצות עיצוב CSS</li>
+                        </ul>
+                    </div>
+                    <div class="team-card">
+                        <h4>DevOps Team</h4>
+                        <ul>
+                            <li>אינפרסטרקטורה כקוד מונעת ל-AI</li>
+                            <li>מניפסטים Docker/Kubernetes</li>
+                            <li>שיפור תהליך CI/CD</li>
+                        </ul>
+                    </div>
+                    <div class="team-card">
+                        <h4>QA Teams</h4>
+                        <ul>
+                            <li>יצירת מקרי בדיקה וסקריפטים</li>
+                            <li>יצירת נתוני בדיקה סינתטיים</li>
+                            <li>תהליך בדיקת התקבלות מיועד</li>
+                        </ul>
+                    </div>
+                    <div class="team-card">
+                        <h4>Project Managers & Specification Writers</h4>
+                        <ul>
+                            <li>יצירת סיפורי משתמש</li>
+                            <li>טיוטות לקריטריוני התקבלות</li>
+                            <li>פיתוח מפרטי טכניים</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Strategic Implementation Roadmap -->
+            <section>
+                <h2>מסלול יישום אסטרטגי</h2>
+                <p>מסלול משולב כדי להבטיח הדמיה מוצלחת, תוצאות מודגשות ובניית יכולות מתמשכות.</p>
+
+                <div class="phase-card">
+                    <h3>שלב 1: יסוד והכנה (חודשים 1-2)</h3>
+                    <ul>
+                        <li><strong>הקמת ממשל AI ומדיניות</strong> - ייצור ועדה, כתיבת הנחיות</li>
+                        <li><strong>הערכת כלי AI והתקנה</strong> - בחירת כלים, הגדרת גישה מאובטחת</li>
+                        <li><strong>תוכנית הדרכה יסודית</strong> - הקצאת סדנאות מבואיות</li>
+                        <li><strong>זיהוי פרויקטים מודגשים</strong> - בחירת פרויקטים ראשוניים, הגדרת מדדים</li>
+                    </ul>
+                </div>
+
+                <div class="phase-card">
+                    <h3>שלב 2: יישומי פילוט מיועדים (חודשים 3-4)</h3>
+                    <ul>
+                        <li><strong>יישום פילוט</strong> - ביצוע אינטגרציות AI מיועדות</li>
+                        <li><strong>פיתוח ספריית פרמפטים</strong> - יצירת ספריות פרמפטים מיוחדות</li>
+                        <li><strong>משוב מתמשך ושיפור ביצועים</strong> - הקמת מנגנוני משוב</li>
+                        <li><strong>בדיקת ממשל ואבטחה</strong> - ביצוע ביקורים ובדיקות</li>
+                    </ul>
+                </div>
+
+                <div class="phase-card">
+                    <h3>שלב 3: יישום ברחבי הארגון (חודשים 5-6)</h3>
+                    <ul>
+                        <li><strong>יישום בסיסי</strong> - הרחבת היישום ליישום ברחבי הארגון</li>
+                        <li><strong>הדרכה מתקדמת ובניית ידע</strong> - הקצאת מודולים מתקדמים</li>
+                        <li><strong>אינטגרציה בתהליכי CI/CD</strong> - הטמעת כלי AI בתהליכים</li>
+                        <li><strong>מעקב ביצועים והערכת ROI</strong> - מדידת השפעות</li>
+                        <li><strong>שיפור מתמשך</strong> - שיפור אסטרטגיה, הכנת מסלול עתידי</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Team-Specific Integration Plans: ICF -->
+            <section>
+                <h2>תוכנית אינטגרציה ייעודית: ICF Team</h2>
+                <div class="highlight-box">
+                    <h3>מיקרושירותים (Golang)</h3>
+                    <p><strong>תחום הקדמה:</strong> תיעוד, שיפור קוד, טיפול בשגיאות ובדיקות</p>
+                </div>
+
+                <h3>שלבי פעולה</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <ol>
+                            <li><strong>בחירת כלי AI</strong> - הערכת כלים ליצירת קוד ותיעוד</li>
+                            <li><strong>פילוט אינטגרציה</strong> - התחלה עם מודול מיקרושירות אחד</li>
+                            <li><strong>הגדרת מדיניות</strong> - הגדרת מעבדות לתיעוד ותבניות</li>
+                        </ol>
+                    </div>
+                    <div class="column">
+                        <ol start="4">
+                            <li><strong>הדרכה והוספה למערכת</strong> - ביצוע סדנאות הדרכה מיועדות</li>
+                            <li><strong>מדדים ומשוב</strong> - הגדרת מדדי הצלחה</li>
+                            <li><strong>Training & Onboarding</strong> - Conduct targeted training sessions</li>
+                            <li><strong>Metrics and Feedback</strong> - Establish success metrics</li>
+                            <li><strong>Expand Implementation</strong> - Roll out to additional modules</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="success-box">
+                    <h4>Success Metrics</h4>
+                    <ul>
+                        <li>Reduction in time spent on documentation</li>
+                        <li>Percentage increase in test coverage</li>
+                        <li>Improved code quality scores</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Team-Specific Integration Plans: Engines -->
+            <section>
+                <h2>Team-Specific Integration: Engines Team</h2>
+                <div class="highlight-box">
+                    <h3>C# .NET Applications</h3>
+                    <p><strong>Primary Focus:</strong> Business logic documentation, monolith decomposition, and unit
+                        testing</p>
+                </div>
+
+                <h3>Action Steps</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <ol>
+                            <li><strong>AI Tool Assessment</strong> - Identify tools for legacy code analysis</li>
+                            <li><strong>Core Logic Documentation</strong> - Document critical business rules</li>
+                            <li><strong>Monolith Analysis Pilot</strong> - Analyze critical portions</li>
+                            <li><strong>Define Microservice Patterns</strong> - Establish guidelines</li>
+                        </ol>
+                    </div>
+                    <div class="column">
+                        <ol start="5">
+                            <li><strong>Unit Test Generation</strong> - Implement AI-generated tests</li>
+                            <li><strong>Developer Training</strong> - Onboard to AI-powered workflows</li>
+                            <li><strong>Success Metrics</strong> - Measure complexity reduction</li>
+                            <li><strong>Gradual Migration</strong> - Execute phased decomposition</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="success-box">
+                    <h4>Success Metrics</h4>
+                    <ul>
+                        <li>Complexity reduction in codebase</li>
+                        <li>Unit test coverage improvements</li>
+                        <li>Time saved on documentation</li>
+                        <li>Improved deployment frequency</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Team-Specific Integration Plans: BI -->
+            <section>
+                <h2>Team-Specific Integration: BI Team</h2>
+                <div class="highlight-box">
+                    <h3>ETL - SQL Stored Procedures</h3>
+                    <p><strong>Primary Focus:</strong> SQL documentation, performance optimization, and modular
+                        refactoring</p>
+                </div>
+
+                <h3>Action Steps</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <ol>
+                            <li><strong>AI Tool Selection</strong> - Evaluate SQL-focused tools</li>
+                            <li><strong>Documentation Initiative</strong> - Document complex procedures</li>
+                            <li><strong>Performance Optimization</strong> - Analyze high-impact queries</li>
+                            <li><strong>Refactoring Strategy</strong> - Break down monolithic procedures</li>
+                        </ol>
+                    </div>
+                    <div class="column">
+                        <ol start="5">
+                            <li><strong>Standard Practices</strong> - Develop SQL standards</li>
+                            <li><strong>Team Training</strong> - Conduct focused workshops</li>
+                            <li><strong>Performance Metrics</strong> - Define success criteria</li>
+                            <li><strong>Systematic Rollout</strong> - Apply to additional procedures</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="success-box">
+                    <h4>Success Metrics</h4>
+                    <ul>
+                        <li>Query execution time reduction</li>
+                        <li>Documentation completeness</li>
+                        <li>Ease of maintenance scores</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Team-Specific Integration Plans: Web Development -->
+            <section>
+                <h2>Team-Specific Integration: Web Development</h2>
+                <div class="highlight-box">
+                    <h3>React/TypeScript Frontend</h3>
+                    <p><strong>Primary Focus:</strong> Component generation, TypeScript interfaces, styling, and testing
+                    </p>
+                </div>
+
+                <h3>Action Steps</h3>
+                <div class="two-column">
+                    <div class="column">
+                        <ol>
+                            <li><strong>Evaluate AI Tools</strong> - Select front-end focused solutions</li>
+                            <li><strong>Component Generation Pilot</strong> - Test on representative UI</li>
+                            <li><strong>Standardize Guidelines</strong> - Establish TypeScript/CSS conventions</li>
+                            <li><strong>Testing Pilot</strong> - Implement AI-driven testing</li>
+                        </ol>
+                    </div>
+                    <div class="column">
+                        <ol start="5">
+                            <li><strong>Developer Training</strong> - Train on AI-assisted workflows</li>
+                            <li><strong>Metrics Definition</strong> - Set performance indicators</li>
+                            <li><strong>Expand Implementation</strong> - Roll out to additional modules</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="success-box">
+                    <h4>Success Metrics</h4>
+                    <ul>
+                        <li>Reduction in component development time</li>
+                        <li>Increased interface consistency</li>
+                        <li>Improved styling quality</li>
+                        <li>Higher test coverage</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Development Workflow Enhancements -->
+            <section>
+                <h2>Development Workflow Enhancements</h2>
+
+                <div class="two-column">
+                    <div class="column">
+                        <div class="highlight-box">
+                            <h3>AI-Enhanced Coding</h3>
+                            <ul>
+                                <li>Intelligent requirement analysis</li>
+                                <li>Smart auto-completion</li>
+                                <li>Automated testing & QA</li>
+                                <li>Automated code reviews</li>
+                            </ul>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h3>Multi-File Editing</h3>
+                            <ul>
+                                <li>Synchronize changes across repositories</li>
+                                <li>Update related components in tandem</li>
+                                <li>System-wide refactoring</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="highlight-box">
+                            <h3>Comprehensive Test Generation</h3>
+                            <ul>
+                                <li>Unit tests with relevant mocks</li>
+                                <li>Integration/API test coverage</li>
+                                <li>UI test automation</li>
+                            </ul>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h3>Intelligent Debugging</h3>
+                            <ul>
+                                <li>Automated log analysis</li>
+                                <li>Root cause identification</li>
+                                <li>Proactive anomaly detection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Training & Enablement Program -->
+            <section>
+                <h2>Training & Enablement Program</h2>
+
+                <div class="two-column">
+                    <div class="column">
+                        <h3>Prompting Techniques</h3>
+                        <ul>
+                            <li><strong>Foundational Prompting</strong> - Clear context, constraints, examples</li>
+                            <li><strong>Advanced Engineering</strong> - Iterative refinement, chain-of-thought</li>
+                            <li><strong>Customized Libraries</strong> - Team-specific templates</li>
+                        </ul>
+
+                        <h3>Training Delivery</h3>
+                        <ul>
+                            <li><strong>Focused Workshops</strong> - Interactive 2-4 hour sessions</li>
+                            <li><strong>Self-Service Resources</strong> - Documentation, tutorials</li>
+                            <li><strong>Peer Learning</strong> - AI Champions, collaboration</li>
+                        </ul>
+                    </div>
+
+                    <div class="column">
+                        <h3>Continuous Improvement</h3>
+                        <ul>
+                            <li><strong>Feedback Mechanisms</strong> - Surveys, metrics analysis</li>
+                            <li><strong>Knowledge Hub</strong> - Central repository of resources</li>
+                            <li><strong>Skill Development</strong> - Progression pathways</li>
+                        </ul>
+
+                        <div class="success-box">
+                            <h4>Key Training Outcomes</h4>
+                            <ul>
+                                <li>Practical AI application skills</li>
+                                <li>Advanced prompt engineering capabilities</li>
+                                <li>Team-specific workflow integration</li>
+                                <li>Security and ethical usage awareness</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Best Practices & Common Pitfalls -->
+            <section>
+                <h2>Best Practices & Common Pitfalls</h2>
+
+                <div class="two-column">
+                    <div class="column">
+                        <div class="success-box">
+                            <h3>Best Practices</h3>
+                            <ul>
+                                <li><strong>Incremental Adoption</strong> - Start simple, scale gradually</li>
+                                <li><strong>Human-AI Collaboration</strong> - Balance automation with oversight</li>
+                                <li><strong>Clear Standards</strong> - Establish explicit guidelines</li>
+                                <li><strong>Regular Reviews</strong> - Verify AI-generated outputs</li>
+                                <li><strong>Continuous Learning</strong> - Foster education and sharing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="warning-box">
+                            <h3>Common Pitfalls</h3>
+                            <ul>
+                                <li><strong>Overreliance</strong> - Diminishing developer skills</li>
+                                <li><strong>Security Vulnerabilities</strong> - Insufficient review</li>
+                                <li><strong>Integration Issues</strong> - Incompatible code generation</li>
+                                <li><strong>Inconsistent Standards</strong> - Fragmented codebase</li>
+                                <li><strong>Skill Gaps</strong> - Uneven adoption across teams</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security & Ethical Guidelines -->
+            <section>
+                <h2>Security & Ethical Guidelines</h2>
+
+                <div class="two-column">
+                    <div class="column">
+                        <div class="highlight-box">
+                            <h3>Data Protection & Privacy</h3>
+                            <ul>
+                                <li><strong>Data Classification</strong> - Label code and data before AI use</li>
+                                <li><strong>Secure APIs</strong> - Restrict and monitor access</li>
+                                <li><strong>Data Minimization</strong> - Share only essential, non-sensitive data</li>
+                            </ul>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h3>Access Control & Governance</h3>
+                            <ul>
+                                <li><strong>Role-Based Access</strong> - Limit AI tool usage to authorized personnel
+                                </li>
+                                <li><strong>Environment Controls</strong> - Restrict deployment until reviewed</li>
+                                <li><strong>Monitoring & Auditing</strong> - Track usage patterns</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="highlight-box">
+                            <h3>Ethical AI Usage</h3>
+                            <ul>
+                                <li><strong>Transparency</strong> - Communicate AI scope and purpose</li>
+                                <li><strong>Attribution</strong> - Document AI-generated content</li>
+                                <li><strong>Bias Mitigation</strong> - Assess outputs for biases</li>
+                                <li><strong>Human Oversight</strong> - Maintain supervision for critical decisions</li>
+                            </ul>
+                        </div>
+
+                        <div class="danger-box">
+                            <h3>Critical Considerations</h3>
+                            <ul>
+                                <li>Never share sensitive customer data with AI tools</li>
+                                <li>Always review AI-generated code for security vulnerabilities</li>
+                                <li>Maintain clear documentation of AI usage in production systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Risk Management Framework -->
+            <section>
+                <h2>Risk Management Framework</h2>
+
+                <div class="two-column">
+                    <div class="column">
+                        <h3>Risk Identification & Assessment</h3>
+                        <div class="warning-box">
+                            <h4>Technical Risks</h4>
+                            <ul>
+                                <li>Incorrect or insecure code generation</li>
+                                <li>Compatibility issues with existing systems</li>
+                                <li>Performance degradation</li>
+                            </ul>
+                        </div>
+
+                        <div class="warning-box">
+                            <h4>Process Risks</h4>
+                            <ul>
+                                <li>Overreliance diminishing critical thinking</li>
+                                <li>Uneven adoption creating workflow inconsistencies</li>
+                                <li>Increased debugging and maintenance efforts</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <h3>Mitigation Strategies</h3>
+                        <div class="success-box">
+                            <h4>Technical Mitigations</h4>
+                            <ul>
+                                <li>Rigorous testing protocols</li>
+                                <li>Comprehensive code reviews</li>
+                                <li>Performance benchmarking</li>
+                            </ul>
+                        </div>
+
+                        <div class="success-box">
+                            <h4>Process Mitigations</h4>
+                            <ul>
+                                <li>Clear AI usage guidelines</li>
+                                <li>Continuous education and skill development</li>
+                                <li>Incremental adoption plans</li>
+                                <li>Regular auditing and monitoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Performance Metrics & Success Criteria -->
+            <section>
+                <h2>Performance Metrics & Success Criteria</h2>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>Development Velocity</h3>
+                        <div class="value">↑50%</div>
+                        <p>Reduction in time spent on repetitive coding tasks</p>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>Code Quality</h3>
+                        <div class="value">↑40%</div>
+                        <p>Improvement in static analysis scores</p>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>Test Coverage</h3>
+                        <div class="value">↑60%</div>
+                        <p>Increase in automated test coverage</p>
+                    </div>
+                </div>
+
+                <div class="two-column" style="margin-top: 30px;">
+                    <div class="column">
+                        <div class="highlight-box">
+                            <h3>Productivity Metrics</h3>
+                            <ul>
+                                <li>Feature delivery timelines</li>
+                                <li>Sprint completion rates</li>
+                                <li>Commit frequency</li>
+                                <li>Time spent on documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="highlight-box">
+                            <h3>ROI Measurement</h3>
+                            <ul>
+                                <li>Tool licensing vs. productivity gains</li>
+                                <li>Reduced time-to-market value</li>
+                                <li>Resource utilization improvements</li>
+                                <li>Defect reduction cost savings</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Implementation Timeline -->
+            <section>
+                <h2>Implementation Timeline (6 Months)</h2>
+
+                <div class="phase-card">
+                    <h3>Phase 1: Foundation (Months 1-2)</h3>
+                    <ul>
+                        <li><strong>Month 1:</strong> Form AI governance committee, draft policies, evaluate tools</li>
+                        <li><strong>Month 2:</strong> Configure secure integrations, conduct foundational training,
+                            identify pilot
+                            projects</li>
+                    </ul>
+                </div>
+
+                <div class="phase-card">
+                    <h3>Phase 2: Pilot Implementation (Months 3-4)</h3>
+                    <ul>
+                        <li><strong>Month 3:</strong> Deploy AI tools to selected projects, develop prompt libraries
+                        </li>
+                        <li><strong>Month 4:</strong> Gather feedback, refine workflows, validate security measures</li>
+                    </ul>
+                </div>
+
+                <div class="phase-card">
+                    <h3>Phase 3: Enterprise Rollout (Months 5-6)</h3>
+                    <ul>
+                        <li><strong>Month 5:</strong> Expand deployment across teams, offer advanced training</li>
+                        <li><strong>Month 6:</strong> Integrate with CI/CD pipelines, assess performance, develop
+                            long-term roadmap
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Next Steps and ROI -->
+            <section>
+                <h2>Next Steps & Long-Term Vision</h2>
+
+                <div class="highlight-box">
+                    <h3>Immediate Next Steps</h3>
+                    <ol>
+                        <li>Secure executive sponsorship and resource allocation</li>
+                        <li>Form the AI governance committee with cross-functional representation</li>
+                        <li>Begin tool evaluation and selection process</li>
+                        <li>Identify champions within each development team</li>
+                        <li>Schedule initial training workshops</li>
+                    </ol>
+                </div>
+
+                <div class="two-column">
+                    <div class="column">
+                        <div class="success-box">
+                            <h3>Expected ROI</h3>
+                            <ul>
+                                <li><strong>Short-term:</strong> 20-30% productivity gains in targeted areas</li>
+                                <li><strong>Medium-term:</strong> 40-50% reduction in repetitive tasks</li>
+                                <li><strong>Long-term:</strong> Sustained competitive advantage through innovation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="success-box">
+                            <h3>Long-Term Vision</h3>
+                            <ul>
+                                <li>AI-augmented development as standard practice</li>
+                                <li>Continuous evolution of AI capabilities</li>
+                                <li>Developer focus shifted to high-value innovation</li>
+                                <li>Ituran as industry leader in AI-driven development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section class="title-slide">
+                <h2>Transforming Ituran Tech Through Generative AI</h2>
+                <p class="subtitle">A Strategic Investment in Development Excellence</p>
+                <div class="highlight-box">
+                    <p>By systematically integrating Generative AI across the SDLC, Ituran Tech will achieve substantial
+                        improvements in development velocity, code quality, and operational efficiency—positioning the
+                        company for
+                        sustained competitive advantage and innovation.</p>
+                </div>
+                <p class="footer">For detailed implementation plans and appendices, please refer to the complete
+                    documentation.</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            rtl: true,
+            hash: true,
+            slideNumber: true,
+            transition: 'slide',
+            controls: true,
+            progress: true,
+            center: true,
+            width: '100%',
+            height: '100%'
+        });
+    </script>
+</body>
+
+</html>
