@@ -15,12 +15,11 @@
                 </div>
             </div>
         </div>
-        
         <div class="list-group">
             <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
+                <div class="agenda-header">
                     <h5 class="mb-2">מבוא</h5>
-                    <small class="text-muted">25 דקות</small>
+                    <div class="agenda-time">15 דקות</div>
                 </div>
                 <small class="text-muted">מציג: הראל</small>
                 <ul class="mb-1 list-unstyled">
@@ -29,71 +28,72 @@
             </div>
 
             <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
+                <div class="agenda-header">
                     <h5 class="mb-2">שימושים מרכזיים</h5>
-                    <small class="text-muted">20 דקות</small>
+                    <div class="agenda-time">10 דקות</div>
                 </div>
                 <small class="text-muted">מציג: דניאל</small>
             </div>
 
             <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
+                <div class="agenda-header">
+                    <h5 class="mb-2">דמו</h5>
+                    <div class="agenda-time">45 דקות</div>
+                </div>
+                <small class="text-muted">מציג: דניאל</small>
+            </div>
+
+            <div class="list-group-item">
+                <div class="agenda-header">
                     <h5 class="mb-2">יישום לפי צוותים</h5>
-                    <small class="text-muted">10 דקות</small>
+                    <div class="agenda-time">10 דקות</div>
                 </div>
                 <small class="text-muted">מציג: אור</small>
-                
             </div>
-             <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-2">דמו</h5>
-                    <small class="text-muted">30 דקות</small>
-                </div>
-            </div>
+
             <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
+                <div class="agenda-header">
                     <h5 class="mb-2">הפסקה</h5>
-                    <small class="text-muted">30 דקות</small>
+                    <div class="agenda-time">40 דקות</div>
                 </div>
             </div>
-                        <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
+
+            <div class="list-group-item">
+                <div class="agenda-header">
                     <h5 class="mb-2">מדיניות אבטחה</h5>
-                    <small class="text-muted">20 דקות</small>
+                    <div class="agenda-time">15 דקות</div>
                 </div>
                 <small class="text-muted">מציג: צוריה</small>
             </div>
 
             <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
+                <div class="agenda-header">
                     <h5 class="mb-2">מפת דרכים אסטרטגית ליישום</h5>
-                    <small class="text-muted">20 דקות</small>
+                    <div class="agenda-time">25 דקות</div>
                 </div>
                 <small class="text-muted">מציג: משה</small>
             </div>
-
             
-
             <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
+                <div class="agenda-header">
                     <h5 class="mb-2">תוכנית הדרכה והכשרה</h5>
-                    <small class="text-muted">20 דקות</small>
+                    <div class="agenda-time">10 דקות</div>
                 </div>
                 <small class="text-muted">מציג: רועי</small>
             </div>
 
             <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
+                <div class="agenda-header">
                     <h5 class="mb-2">מדדי ביצוע וקריטריוני הצלחה</h5>
-                    <small class="text-muted">20 דקות</small>
+                    <div class="agenda-time">10 דקות</div>
                 </div>
                 <small class="text-muted">מציג: אשר</small>
             </div>
 
             <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
+                <div class="agenda-header">
                     <h5 class="mb-2">מבט לעתיד</h5>
-                    <small class="text-muted">20 דקות</small>
+                    <div class="agenda-time">20 דקות</div>
                 </div>
                 <small class="text-muted">מציג: ג'וני</small>
                 <ul class="mb-1 list-unstyled">
@@ -102,4 +102,25 @@
             </div>
         </div>
     </div>
+
+    <style>
+        .agenda-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .agenda-time {
+            min-width: 80px;
+            text-align: left;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+
+        .list-group-item h5 {
+            margin: 0;
+            flex: 1;
+        }
+    </style>
 </section>

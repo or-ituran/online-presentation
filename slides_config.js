@@ -18,71 +18,116 @@ const slides = [
     },
     {
         id: 'slide4',
+        title: 'Anthropic - דיריקס הופמן',
+        file: 'slides/anthropic-summary.html'
+    },
+    {
+        id: 'slide5',
         title: 'שימושים מרכזיים',
         file: 'slides/use-cases.html'
     },
     {
-        id: 'slide5',
+        id: 'slide-icf',
         title: 'צוות ICF (Golang)',
-        file: 'slides/icf.html'
+        file: 'slides/icf.html',
+        teamImage: {
+            title: 'Go Backend Development',
+            subtitle: 'Team ICF',
+            colors: ['#1a365d', '#2d3748']
+        }
     },
     {
-        id: 'slide6',
+        id: 'slide-engines',
         title: 'צוות Engines (C# .NET)',
-        file: 'slides/engines.html'
+        file: 'slides/engines.html',
+        teamImage: {
+            title: 'C# .NET Development',
+            subtitle: 'Team Engines',
+            colors: ['#2b6cb0', '#4299e1']
+        }
     },
     {
-        id: 'slide7',
+        id: 'slide-bi',
         title: 'צוות BI (SQL)',
-        file: 'slides/bi.html'
+        file: 'slides/bi.html',
+        teamImage: {
+            title: 'Business Intelligence',
+            subtitle: 'Team BI',
+            colors: ['#4299e1', '#63b3ed']
+        }
     },
     {
-        id: 'slide8',
+        id: 'slide-iweb',
         title: 'צוות IWEB (C# .Net)',
-        file: 'slides/iweb.html'
+        file: 'slides/iweb.html',
+        teamImage: {
+            title: 'Web Development',
+            subtitle: 'Team IWEB',
+            colors: ['#3182ce', '#4299e1']
+        }
     },
     {
-        id: 'slide9',
+        id: 'slide-web',
         title: 'פיתוח Web (React/TypeScript)',
-        file: 'slides/web.html'
+        file: 'slides/web.html',
+        teamImage: {
+            title: 'React & TypeScript',
+            subtitle: 'Web Team',
+            colors: ['#2c5282', '#2b6cb0']
+        }
     },
     {
-        id: 'slide10',
+        id: 'slide-mobile',
         title: 'צוות Mobile',
-        file: 'slides/mobile.html'
+        file: 'slides/mobile.html',
+        teamImage: {
+            title: 'Mobile Development',
+            subtitle: 'Mobile Team',
+            colors: ['#2a4365', '#2c5282']
+        }
     },
     {
-        id: 'slide11',
+        id: 'slide-devops',
         title: 'צוות DevOps',
-        file: 'slides/devops.html'
+        file: 'slides/devops.html',
+        teamImage: {
+            title: 'DevOps & Infrastructure',
+            subtitle: 'DevOps Team',
+            colors: ['#1a365d', '#2d3748']
+        }
     },
     {
-        id: 'slide12',
+        id: 'slide-qa',
         title: 'צוות QA (V&V)',
-        file: 'slides/qa.html'
+        file: 'slides/qa.html',
+        teamImage: {
+            title: 'Quality Assurance',
+            subtitle: 'QA Team',
+            colors: ['#2b6cb0', '#4299e1']
+        }
     },
     {
-        id: 'slide13',
+        id: 'slide14',
         title: 'מדיניות אבטחה',
         file: 'slides/security-measures.html'
     },
     {
-        id: 'slide14',
+        id: 'slide15',
         title: 'מפת דרכים אסטרטגית ליישום',
         file: 'slides/implementation-roadmap.html'
     },
     {
-        id: 'slide15',
+        id: 'slide16',
         title: 'תוכנית הדרכה והכשרה',
         file: 'slides/training-program.html'
     },
     {
-        id: 'slide16',
+        id: 'slide17',
         title: 'מדדי ביצוע וקריטריוני הצלחה',
         file: 'slides/performance-metrics.html'
     },
     {
-        id: 'slide17',
+        id: 'slide18',
         title: 'מבט לעתיד',
         file: 'slides/future.html'
     }

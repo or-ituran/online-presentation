@@ -312,7 +312,6 @@ h3 {
     cursor: pointer;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
-    transform: rotate(180deg);
 }
 
 .nav-button:hover {
@@ -1563,10 +1562,6 @@ body {
     direction: rtl;
 }
 
-.nav-button {
-    transform: rotate(180deg);
-}
-
 #slide-indicators {
     direction: rtl;
 }
@@ -2059,4 +2054,184 @@ ul li:before {
 
 #slide6 .role-section.expanded .expand-icon {
     transform: rotate(180deg);
+}
+
+/* Video Container Styles */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    margin-top: 2rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Team Metrics Styles */
+.team-metrics-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+    justify-content: center;
+}
+
+.metric-box {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    width: 300px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.metric-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.metric-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: var(--ituran-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.metric-icon-wrapper i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.metric-box h4 {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.metric-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Team Image Styles */
+.team-image-container {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.team-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-image-container:hover .team-image {
+    transform: scale(1.05);
+}
+
+.team-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+}
+
+/* Team Image Container Animation */
+.team-image-container {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-image-container canvas {
+    transition: transform 0.5s ease-in-out;
+}
+
+.team-image-container:hover canvas {
+    transform: scale(1.02);
+}
+
+.team-image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-image-container:hover .team-image-overlay {
+    transform: translateY(0);
+}
+
+.team-image-overlay p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Team Section Animation */
+.slide[id^="slide-"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.slide[id^="slide-"].active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhance team metrics visibility */
+.team-metrics-container {
+    margin-top: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out 0.3s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

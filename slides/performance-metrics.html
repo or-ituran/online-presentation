@@ -19,13 +19,17 @@
                         <div class="row g-4">
                             <div class="col-6">
                                 <div class="metric-stat">
-                                    <div class="display-4 mb-2 text-primary">40%</div>
+                                    <div class="display-4 mb-2 text-primary">
+                                        <i class="fas fa-fast-forward fa-2x"></i>
+                                    </div>
                                     <div class="text-muted">קיצור זמני פיתוח</div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="metric-stat">
-                                    <div class="display-4 mb-2 text-primary">30%</div>
+                                    <div class="display-4 mb-2 text-primary">
+                                        <i class="fas fa-chart-line fa-2x"></i>
+                                    </div>
                                     <div class="text-muted">שיפור בפרודוקטיביות</div>
                                 </div>
                             </div>
@@ -45,14 +49,18 @@
                         <div class="row g-4">
                             <div class="col-6">
                                 <div class="metric-stat">
-                                    <div class="display-4 mb-2 text-primary">50%</div>
-                                    <div class="text-muted">הפחתת באגים</div>
+                                    <div class="display-4 mb-2 text-primary">
+                                        <i class="fas fa-times-circle fa-2x"></i>
+                                    </div>
+                                    <div class="text-muted text-nowrap">הפחתת באגים</div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="metric-stat">
-                                    <div class="display-4 mb-2 text-primary">35%</div>
-                                    <div class="text-muted">שיפור באיכות הקוד</div>
+                                    <div class="display-4 mb-2 text-primary">
+                                        <i class="fas fa-star fa-2x"></i>
+                                    </div>
+                                    <div class="text-muted text-nowrap">שיפור באיכות הקוד</div>
                                 </div>
                             </div>
                         </div>
@@ -71,14 +79,18 @@
                         <div class="row g-4">
                             <div class="col-6">
                                 <div class="metric-stat">
-                                    <div class="display-4 mb-2 text-primary">60%</div>
-                                    <div class="text-muted">האצת חדשנות</div>
+                                    <div class="display-4 mb-2 text-primary">
+                                        <i class="fas fa-rocket fa-2x"></i>
+                                    </div>
+                                    <div class="text-muted text-nowrap">האצת חדשנות</div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="metric-stat">
-                                    <div class="display-4 mb-2 text-primary">45%</div>
-                                    <div class="text-muted">שיפור בשיתוף ידע</div>
+                                    <div class="display-4 mb-2 text-primary">
+                                        <i class="fas fa-user-friends fa-2x"></i>
+                                    </div>
+                                    <div class="text-muted text-nowrap">שיפור בשיתוף ידע</div>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +117,11 @@
                             <ul class="list-group list-group-flush bg-transparent">
                                 <li class="list-group-item bg-transparent border-0 ps-0">
                                     <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>קיצור זמני פיתוח ב-40%</span>
+                                    <span>קיצור בזמני פיתוח</span>
+                                </li>
+                                <li class="list-group-item bg-transparent border-0 ps-0">
+                                    <i class="fas fa-check me-2 text-primary"></i>
+                                    <span>קיצור בזמני איפיון</span>
                                 </li>
                                 <li class="list-group-item bg-transparent border-0 ps-0">
                                     <i class="fas fa-check me-2 text-primary"></i>
@@ -129,11 +145,15 @@
                             <ul class="list-group list-group-flush bg-transparent">
                                 <li class="list-group-item bg-transparent border-0 ps-0">
                                     <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>הפחתת באגים ב-50%</span>
+                                    <span>הפחתה בבאגים</span>
                                 </li>
                                 <li class="list-group-item bg-transparent border-0 ps-0">
                                     <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>שיפור בכיסוי בדיקות</span>
+                                    <span>שיפור בכיסוי בדיקות ותהליך הפקת תסריטים</span>
+                                </li>
+                                <li class="list-group-item bg-transparent border-0 ps-0">
+                                    <i class="fas fa-check me-2 text-primary"></i>
+                                    <span>שיפור בדיקת לוגים אוטומטית</span>
                                 </li>
                                 <li class="list-group-item bg-transparent border-0 ps-0">
                                     <i class="fas fa-check me-2 text-primary"></i>
@@ -157,7 +177,7 @@
                                 </li>
                                 <li class="list-group-item bg-transparent border-0 ps-0">
                                     <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>האצת למידה והכשרה</span>
+                                    <span>האצת למידה והכשרה של עובדים</span>
                                 </li>
                                 <li class="list-group-item bg-transparent border-0 ps-0">
                                     <i class="fas fa-check me-2 text-primary"></i>
@@ -197,20 +217,67 @@
 
     <style>
         .metric-stat {
-            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            padding: 1.25rem;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.1);
+            min-height: 140px;
+            gap: 0.75rem;
         }
-        
+
         .metric-stat:hover {
             transform: translateY(-5px);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .metric-stat .display-4 {
+            margin: 0 !important;
+            height: auto !important;
+        }
+
+        .metric-stat i {
+            font-size: 2.25rem !important;
+            height: auto;
+        }
+
+        .text-muted {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-size: 1rem;
+            line-height: 1.2;
+            margin: 0;
+            white-space: nowrap;
+            width: 100%;
+            text-align: center;
         }
 
         .card {
+            background: rgba(0, 0, 0, 0.15) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(10px);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.2) !important;
+        }
+
+        .row.g-4 {
+            margin: 0 -0.75rem;
+        }
+
+        .row.g-4 > [class*="col-"] {
+            padding: 0.75rem;
+        }
+
+        .card-body {
+            padding: 1.5rem !important;
         }
 
         .kpi-item {
@@ -218,11 +285,12 @@
             background: rgba(0, 0, 0, 0.2);
             border-radius: 12px;
             height: 100%;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         .kpi-item:hover {
             transform: translateY(-5px);
+            background: rgba(0, 0, 0, 0.3);
         }
 
         .list-group-item {
@@ -233,18 +301,20 @@
             color: #009adf !important;
         }
 
-        .text-muted {
-            color: rgba(255, 255, 255, 0.7) !important;
-        }
-
-        .display-4 {
-            font-size: 2.5rem;
-            font-weight: 600;
-        }
-
         .lead {
             font-size: 1.25rem;
             color: rgba(255, 255, 255, 0.9);
         }
+
+        @media (max-width: 768px) {
+            .metric-stat {
+                min-height: 120px;
+                padding: 1rem;
+            }
+            
+            .text-muted {
+                font-size: 0.9rem;
+            }
+        }
     </style>
-</section> 
+</section>
