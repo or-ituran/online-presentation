@@ -3,317 +3,122 @@
         <div class="text-center mb-5">
             <h1 class="display-4 mb-3">מדדי ביצוע וקריטריוני הצלחה</h1>
             <p class="lead mb-0">מדידה והערכה של השפעת AI על תהליכי הפיתוח</p>
-            <div class="divider mx-auto mt-4" style="width: 80px; height: 3px; background: var(--ituran-accent);"></div>
         </div>
 
         <!-- Metrics Cards -->
-        <div class="row g-4 mb-5">
-            <!-- Development Efficiency -->
-            <div class="col-md-4">
-                <div class="card h-100 border-0 bg-opacity-10 bg-light">
-                    <div class="card-body text-center">
-                        <div class="d-flex align-items-center justify-content-center mb-4">
-                            <i class="fas fa-rocket me-2 text-primary"></i>
-                            <h2 class="card-title h4 mb-0">יעילות פיתוח</h2>
-                        </div>
-                        <div class="row g-4">
-                            <div class="col-6">
-                                <div class="metric-stat">
-                                    <div class="display-4 mb-2 text-primary">
-                                        <i class="fas fa-fast-forward fa-2x"></i>
-                                    </div>
-                                    <div class="text-muted">קיצור זמני פיתוח</div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="metric-stat">
-                                    <div class="display-4 mb-2 text-primary">
-                                        <i class="fas fa-chart-line fa-2x"></i>
-                                    </div>
-                                    <div class="text-muted">שיפור בפרודוקטיביות</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="metrics-grid">
+            <!-- Development -->
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-code-branch fa-3x"></i>
                 </div>
+                <h3>פיתוח</h3>
+                <ul class="metric-list">
+                    <li><i class="fas fa-forward"></i> קיצור זמני פיתוח</li>
+                    <li><i class="fas fa-bug-slash"></i> הפחתת באגים</li>
+                    <li><i class="fas fa-robot"></i> אוטומציה</li>
+                </ul>
             </div>
 
-            <!-- Code Quality -->
-            <div class="col-md-4">
-                <div class="card h-100 border-0 bg-opacity-10 bg-light">
-                    <div class="card-body text-center">
-                        <div class="d-flex align-items-center justify-content-center mb-4">
-                            <i class="fas fa-code me-2 text-primary"></i>
-                            <h2 class="card-title h4 mb-0">איכות קוד</h2>
-                        </div>
-                        <div class="row g-4">
-                            <div class="col-6">
-                                <div class="metric-stat">
-                                    <div class="display-4 mb-2 text-primary">
-                                        <i class="fas fa-times-circle fa-2x"></i>
-                                    </div>
-                                    <div class="text-muted text-nowrap">הפחתת באגים</div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="metric-stat">
-                                    <div class="display-4 mb-2 text-primary">
-                                        <i class="fas fa-star fa-2x"></i>
-                                    </div>
-                                    <div class="text-muted text-nowrap">שיפור באיכות הקוד</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Quality -->
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-shield-check fa-3x"></i>
                 </div>
+                <h3>איכות</h3>
+                <ul class="metric-list">
+                    <li><i class="fas fa-check-double"></i> בקרת איכות</li>
+                    <li><i class="fas fa-vial"></i> כיסוי בדיקות</li>
+                    <li><i class="fas fa-code"></i> סטנדרטים</li>
+                </ul>
             </div>
 
-            <!-- Innovation & Knowledge -->
-            <div class="col-md-4">
-                <div class="card h-100 border-0 bg-opacity-10 bg-light">
-                    <div class="card-body text-center">
-                        <div class="d-flex align-items-center justify-content-center mb-4">
-                            <i class="fas fa-lightbulb me-2 text-primary"></i>
-                            <h2 class="card-title h4 mb-0">חדשנות וידע</h2>
-                        </div>
-                        <div class="row g-4">
-                            <div class="col-6">
-                                <div class="metric-stat">
-                                    <div class="display-4 mb-2 text-primary">
-                                        <i class="fas fa-rocket fa-2x"></i>
-                                    </div>
-                                    <div class="text-muted text-nowrap">האצת חדשנות</div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="metric-stat">
-                                    <div class="display-4 mb-2 text-primary">
-                                        <i class="fas fa-user-friends fa-2x"></i>
-                                    </div>
-                                    <div class="text-muted text-nowrap">שיפור בשיתוף ידע</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Innovation -->
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-lightbulb fa-3x"></i>
                 </div>
+                <h3>חדשנות</h3>
+                <ul class="metric-list">
+                    <li><i class="fas fa-rocket"></i> פתרונות חדשניים</li>
+                    <li><i class="fas fa-brain"></i> למידה והתפתחות</li>
+                    <li><i class="fas fa-cubes"></i> ארכיטקטורה</li>
+                </ul>
             </div>
-        </div>
 
-        <!-- KPI Section -->
-        <div class="card border-0 bg-opacity-10 bg-light">
-            <div class="card-body">
-                <div class="d-flex align-items-center mb-4">
-                    <i class="fas fa-chart-line me-2 text-primary"></i>
-                    <h2 class="h3 mb-0">מדדי הצלחה מרכזיים</h2>
+            <!-- Team -->
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-users fa-3x"></i>
                 </div>
-                <div class="row g-4">
-                    <!-- Time to Market -->
-                    <div class="col-md-3">
-                        <div class="kpi-item">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-clock me-2 text-primary"></i>
-                                <h3 class="h5 mb-0">זמן לשוק</h3>
-                            </div>
-                            <ul class="list-group list-group-flush bg-transparent">
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>קיצור בזמני פיתוח</span>
-                                </li>
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>קיצור בזמני איפיון</span>
-                                </li>
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>האצת מחזורי שחרור</span>
-                                </li>
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>שיפור בזמני תגובה</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Quality & Reliability -->
-                    <div class="col-md-3">
-                        <div class="kpi-item">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-shield-alt me-2 text-primary"></i>
-                                <h3 class="h5 mb-0">איכות ואמינות</h3>
-                            </div>
-                            <ul class="list-group list-group-flush bg-transparent">
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>הפחתה בבאגים</span>
-                                </li>
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>שיפור בכיסוי בדיקות ותהליך הפקת תסריטים</span>
-                                </li>
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>שיפור בדיקת לוגים אוטומטית</span>
-                                </li>
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>עמידה בתקני אבטחה</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Team Efficiency -->
-                    <div class="col-md-3">
-                        <div class="kpi-item">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-users me-2 text-primary"></i>
-                                <h3 class="h5 mb-0">יעילות צוותית</h3>
-                            </div>
-                            <ul class="list-group list-group-flush bg-transparent">
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>שיפור בפרודוקטיביות</span>
-                                </li>
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>האצת למידה והכשרה של עובדים</span>
-                                </li>
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>שיתוף ידע מוגבר</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Cost Savings -->
-                    <div class="col-md-3">
-                        <div class="kpi-item">
-                            <div class="d-flex align-items-center mb-3">
-                                <i class="fas fa-coins me-2 text-primary"></i>
-                                <h3 class="h5 mb-0">חיסכון בעלויות</h3>
-                            </div>
-                            <ul class="list-group list-group-flush bg-transparent">
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>הפחתת עלויות תחזוקה</span>
-                                </li>
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>ייעול משאבי פיתוח</span>
-                                </li>
-                                <li class="list-group-item bg-transparent border-0 ps-0">
-                                    <i class="fas fa-check me-2 text-primary"></i>
-                                    <span>ROI משופר</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <h3>צוות</h3>
+                <ul class="metric-list">
+                    <li><i class="fas fa-chart-line"></i> פרודוקטיביות</li>
+                    <li><i class="fas fa-comments"></i> תקשורת</li>
+                    <li><i class="fas fa-smile"></i> שביעות רצון</li>
+                </ul>
             </div>
         </div>
     </div>
 
     <style>
-        .metric-stat {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            padding: 1.25rem;
-            border-radius: 12px;
-            background: rgba(0, 0, 0, 0.1);
-            min-height: 140px;
-            gap: 0.75rem;
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
         }
 
-        .metric-stat:hover {
-            transform: translateY(-5px);
+        .metric-card {
             background: rgba(0, 0, 0, 0.2);
-        }
-
-        .metric-stat .display-4 {
-            margin: 0 !important;
-            height: auto !important;
-        }
-
-        .metric-stat i {
-            font-size: 2.25rem !important;
-            height: auto;
-        }
-
-        .text-muted {
-            color: rgba(255, 255, 255, 0.9) !important;
-            font-size: 1rem;
-            line-height: 1.2;
-            margin: 0;
-            white-space: nowrap;
-            width: 100%;
+            border-radius: 12px;
+            padding: 2rem;
             text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        .card {
-            background: rgba(0, 0, 0, 0.15) !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
+        .metric-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            background: rgba(0, 0, 0, 0.2) !important;
         }
 
-        .row.g-4 {
-            margin: 0 -0.75rem;
+        .metric-icon {
+            color: #009adf;
+            margin-bottom: 1rem;
         }
 
-        .row.g-4 > [class*="col-"] {
-            padding: 0.75rem;
+        .metric-card h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        .card-body {
-            padding: 1.5rem !important;
+        .metric-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
         }
 
-        .kpi-item {
-            padding: 1.5rem;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            height: 100%;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-
-        .kpi-item:hover {
-            transform: translateY(-5px);
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        .list-group-item {
-            padding: 0.75rem 0;
-        }
-
-        .text-primary {
-            color: #009adf !important;
-        }
-
-        .lead {
-            font-size: 1.25rem;
+        .metric-list li {
             color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .metric-list li i {
+            color: #009adf;
+            font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         @media (max-width: 768px) {
-            .metric-stat {
-                min-height: 120px;
-                padding: 1rem;
-            }
-            
-            .text-muted {
-                font-size: 0.9rem;
+            .metrics-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>

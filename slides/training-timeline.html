@@ -1,0 +1,183 @@
+<section class="slide" id="training-timeline">
+    <div class="slide-content">
+        <h1 class="text-center mb-4">לוח זמנים להדרכה</h1>
+        
+        <div class="timeline-container">
+            <div class="timeline-grid">
+                <!-- Card 1 -->
+                <div class="timeline-card">
+                    <div class="timeline-icon">
+                        <span class="week">1-2</span>
+                        <span class="text">שבועות</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>הכשרה בסיסית</h3>
+                        <ul class="timeline-list">
+                            <li>מבוא ל-AI והכרת המושגים</li>
+                            <li>שיטות עבודה בסיסיות</li>
+                            <li>התנסות ראשונית ותרגול מודרך</li>
+                            <li>אבטחת מידע ושימוש בטוח</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="timeline-card">
+                    <div class="timeline-icon">
+                        <span class="week">3-4</span>
+                        <span class="text">שבועות</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>הכשרה מתקדמת</h3>
+                        <ul class="timeline-list">
+                            <li>טכניקות עבודה לבעיות מורכבות</li>
+                            <li>אינטגרציה עם כלים חדשים</li>
+                            <li>תבניות למשימות חוזרות</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="timeline-card">
+                    <div class="timeline-icon">
+                        <span class="week">5-6</span>
+                        <span class="text">שבועות</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>התמחות והעמקה</h3>
+                        <ul class="timeline-list">
+                            <li>התמחות לפי תפקיד וצוות</li>
+                            <li>פרויקטים מעשיים</li>
+                            <li>פיתוח תבניות ייעודיות</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="timeline-card">
+                    <div class="timeline-icon">
+                        <span class="week">7-8</span>
+                        <span class="text">שבועות</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>יישום והטמעה</h3>
+                        <ul class="timeline-list">
+                            <li>שילוב בתהליכי העבודה</li>
+                            <li>מדידה והערכת ביצועים</li>
+                            <li>הקמת קהילת ידע</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .timeline-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding: 0.75rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+            cursor: default;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .timeline-icon {
+            margin-bottom: 0.5rem;
+            display: inline-flex;
+            gap: 0.35rem;
+            align-items: baseline;
+            justify-content: center;
+        }
+
+        .timeline-icon .week {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            line-height: 1;
+        }
+
+        .timeline-icon .text {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .timeline-card h3 {
+            font-size: 1.75rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: right;
+        }
+
+        .timeline-list li {
+            margin-bottom: 0.5rem;
+            padding-right: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-list li:before {
+            content: "•";
+            color: #009adf;
+            position: absolute;
+            right: 0;
+        }
+
+        @media (max-width: 1200px) {
+            .timeline-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .timeline-list {
+                font-size: 1.05rem;
+            }
+
+            .timeline-icon .week {
+                font-size: 1.6rem;
+            }
+            .timeline-icon .text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</section>

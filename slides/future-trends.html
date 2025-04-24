@@ -1,0 +1,121 @@
+<section class="slide" id="future-trends">
+    <div class="slide-content">
+        <h1 class="text-center mb-4">מגמות והזדמנויות</h1>
+        
+        <div class="trends-container">
+            <div class="trends-grid">
+                <div class="trend-item">
+                    <div class="trend-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="trend-details">
+                        <h3>מודלים מתקדמים</h3>
+                        <p>שילוב מודלי AI חדשניים ומותאמים לצרכי הארגון</p>
+                    </div>
+                </div>
+
+                <div class="trend-item">
+                    <div class="trend-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="trend-details">
+                        <h3>אוטומציה מורחבת</h3>
+                        <p>הרחבת יכולות אוטומציה והתייעלות תהליכים</p>
+                    </div>
+                </div>
+
+                <div class="trend-item">
+                    <div class="trend-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="trend-details">
+                        <h3>פיתוח מואץ</h3>
+                        <p>האצת תהליכי פיתוח ושיפור איכות הקוד</p>
+                    </div>
+                </div>
+
+                <div class="trend-item">
+                    <div class="trend-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="trend-details">
+                        <h3>חדשנות טכנולוגית</h3>
+                        <p>אימוץ טכנולוגיות חדשות ופתרונות מתקדמים</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .trends-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .trends-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .trend-item {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .trend-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .trend-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.75rem;
+            border: 2px solid #009adf;
+            background: rgba(0, 154, 223, 0.1);
+        }
+
+        .trend-icon i {
+            font-size: 1.75rem;
+            color: #009adf;
+        }
+
+        .trend-details h3 {
+            font-size: 1.75rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .trend-details p {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .trends-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trend-details h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</section>

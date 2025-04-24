@@ -1,0 +1,187 @@
+<section class="slide" id="slide-benefits">
+    <div class="slide-content">
+        <h1 class="text-center mb-4">יתרונות מרכזיים</h1>
+        
+        <div class="roles-container">
+            <div class="role-card benefits-card">
+                <div class="role-header">
+                    <i class="fas fa-star"></i>
+                    <h3>יתרונות מרכזיים</h3>
+                </div>
+                <div class="role-content">
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-circle">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <span class="benefit-label">האצת זמני פיתוח</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-circle">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span class="benefit-label">הפחתת באגים משמעותית</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-circle">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <span class="benefit-label">אופטימיזציה של עלויות</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-circle">
+                                <i class="fas fa-code-branch"></i>
+                            </div>
+                            <span class="benefit-label">שיפור איכות הקוד</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .roles-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 4rem !important;
+            margin-bottom: 2.5rem;
+        }
+
+        .role-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .role-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .role-header {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .role-header i {
+            font-size: 3rem;
+            color: #009adf;
+        }
+
+        .role-header h3 {
+            margin: 0;
+            font-size: 2.75rem;
+            color: white;
+        }
+
+        .role-content {
+            padding: 2rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            padding: 2rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+        }
+
+        .benefit-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(0, 154, 223, 0.1);
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #009adf;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-circle i {
+            font-size: 4rem;
+            color: #009adf;
+        }
+
+        .benefit-circle:hover {
+            transform: scale(1.05);
+            background: rgba(0, 154, 223, 0.2);
+            box-shadow: 0 0 15px rgba(0, 154, 223, 0.3);
+        }
+
+        .benefit-label {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 2rem;
+            display: block;
+            margin-top: 1.5rem;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3.5rem !important;
+            }
+
+            .role-header h3 {
+                font-size: 2.25rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2.5rem;
+            }
+
+            .benefit-circle {
+                width: 120px;
+                height: 120px;
+            }
+
+            .benefit-circle i {
+                font-size: 3.5rem;
+            }
+
+            .benefit-label {
+                font-size: 1.75rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem !important;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .benefit-circle {
+                width: 100px;
+                height: 100px;
+            }
+
+            .benefit-circle i {
+                font-size: 3rem;
+            }
+
+            .benefit-label {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</section>

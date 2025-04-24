@@ -1,0 +1,157 @@
+<section class="slide" id="future-challenges">
+    <div class="slide-content">
+        <h1 class="text-center mb-4">אתגרים צפויים</h1>
+        
+        <div class="challenges-container">
+            <div class="challenges-grid">
+                <div class="challenge-item critical">
+                    <div class="challenge-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="challenge-details">
+                        <h3>אבטחת מידע</h3>
+                        <p>התמודדות עם סיכוני אבטחה חדשים ואיומים מתפתחים</p>
+                        <ul class="challenge-list">
+                            <li>זיהוי וטיפול בפרצות אבטחה</li>
+                            <li>הגנה על קניין רוחני</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="challenge-item critical">
+                    <div class="challenge-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="challenge-details">
+                        <h3>פרטיות</h3>
+                        <p>שמירה על פרטיות המידע והגנת נתונים רגישים</p>
+                        <ul class="challenge-list">
+                            <li>עמידה בתקני פרטיות</li>
+                            <li>הגנה על מידע אישי</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="challenge-item">
+                    <div class="challenge-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="challenge-details">
+                        <h3>אתיקה</h3>
+                        <p>שימוש אחראי ב-AI תוך שמירה על עקרונות אתיים</p>
+                        <ul class="challenge-list">
+                            <li>שקיפות בשימוש ב-AI</li>
+                            <li>מניעת הטיות</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="challenge-item">
+                    <div class="challenge-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="challenge-details">
+                        <h3>אינטגרציה</h3>
+                        <p>שילוב יעיל של טכנולוגיות AI במערכות קיימות</p>
+                        <ul class="challenge-list">
+                            <li>תאימות למערכות קיימות</li>
+                            <li>ניהול שינויים מבוקר</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .challenges-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .challenge-item {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .challenge-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .challenge-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.75rem;
+            border: 2px solid #009adf;
+            background: rgba(0, 154, 223, 0.1);
+        }
+
+        .challenge-icon i {
+            font-size: 1.75rem;
+            color: #009adf;
+        }
+
+        .challenge-details h3 {
+            font-size: 1.75rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .challenge-details p {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+        }
+
+        .challenge-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .challenge-list li {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            padding-right: 1.5rem;
+            position: relative;
+        }
+
+        .challenge-list li:before {
+            content: "•";
+            color: #009adf;
+            position: absolute;
+            right: 0;
+        }
+
+        @media (max-width: 768px) {
+            .challenges-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .challenge-details h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</section>

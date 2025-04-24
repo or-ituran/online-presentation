@@ -1,0 +1,154 @@
+<section class="slide" id="slide-devops-uses">
+    <div class="slide-content">
+        <h1 class="text-center mb-4">שימושי AI ל-DevOps</h1>
+        
+        <div class="roles-container">
+            <div class="role-card">
+                <div class="role-header">
+                    <i class="fas fa-server"></i>
+                    <h3>מהנדסי DevOps</h3>
+                </div>
+                <div class="role-content">
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>אוטומציה של תשתיות</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>ניטור וניתוח לוגים</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>אופטימיזציה של ביצועים</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-sliders-h"></i>
+                            <span>ניהול קונפיגורציה חכם</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .roles-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 4rem !important;
+            margin-bottom: 2.5rem;
+        }
+
+        .role-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .role-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .role-header {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .role-header i {
+            font-size: 3rem;
+            color: #009adf;
+        }
+
+        .role-header h3 {
+            margin: 0;
+            font-size: 2.75rem;
+            color: white;
+        }
+
+        .role-content {
+            padding: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .feature-item {
+            background: rgba(0, 0, 0, 0.15);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        .feature-item i {
+            color: #009adf;
+            font-size: 2.5rem;
+        }
+
+        .feature-item span {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.75rem;
+        }
+
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 3.5rem !important;
+            }
+
+            .role-header h3 {
+                font-size: 2.25rem;
+            }
+
+            .feature-item span {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 3rem !important;
+            }
+
+            .role-header {
+                padding: 1.5rem;
+            }
+
+            .role-header h3 {
+                font-size: 2rem;
+            }
+
+            .feature-item {
+                padding: 1.25rem;
+            }
+
+            .feature-item span {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</section>

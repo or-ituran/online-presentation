@@ -1,0 +1,160 @@
+<section class="slide" id="future-roadmap">
+    <div class="slide-content">
+        <h1 class="text-center mb-4">מפת דרכים עתידית</h1>
+        
+        <div class="roadmap-container">
+            <div class="roadmap-grid">
+                <div class="roadmap-item short-term">
+                    <div class="roadmap-header">
+                        <div class="roadmap-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>טווח קצר</h3>
+                        <span class="period">6-12 חודשים</span>
+                    </div>
+                    <ul class="roadmap-list">
+                        <li>הרחבת שימושי AI קיימים</li>
+                        <li>שיפור יכולות אוטומציה</li>
+                        <li>הדרכות מתקדמות</li>
+                        <li>הטמעת כלי AI נוספים</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-item medium-term">
+                    <div class="roadmap-header">
+                        <div class="roadmap-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <h3>טווח בינוני</h3>
+                        <span class="period">12-24 חודשים</span>
+                    </div>
+                    <ul class="roadmap-list">
+                        <li>פיתוח פתרונות ייחודיים</li>
+                        <li>שילוב טכנולוגיות חדשות</li>
+                        <li>הרחבת תחומי יישום</li>
+                        <li>בניית תשתיות מתקדמות</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-item long-term">
+                    <div class="roadmap-header">
+                        <div class="roadmap-icon">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <h3>טווח ארוך</h3>
+                        <span class="period">24+ חודשים</span>
+                    </div>
+                    <ul class="roadmap-list">
+                        <li>חדשנות מבוססת AI</li>
+                        <li>פיתוח פלטפורמות ייעודיות</li>
+                        <li>מובילות טכנולוגית</li>
+                        <li>השפעה על התעשייה</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .roadmap-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .roadmap-item {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .roadmap-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .roadmap-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+        }
+
+        .roadmap-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #009adf;
+            background: rgba(0, 154, 223, 0.1);
+        }
+
+        .roadmap-icon i {
+            font-size: 1.5rem;
+            color: #009adf;
+        }
+
+        .roadmap-header h3 {
+            font-size: 1.5rem;
+            color: white;
+            margin: 0;
+        }
+
+        .period {
+            color: #009adf;
+            font-size: 1rem;
+            display: block;
+            margin-top: 0.25rem;
+        }
+
+        .roadmap-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .roadmap-list li {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            padding-right: 1.5rem;
+            position: relative;
+        }
+
+        .roadmap-list li:before {
+            content: "•";
+            color: #009adf;
+            position: absolute;
+            right: 0;
+        }
+
+        @media (max-width: 992px) {
+            .roadmap-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .roadmap-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .roadmap-header h3 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</section>

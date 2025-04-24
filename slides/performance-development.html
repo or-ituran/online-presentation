@@ -1,0 +1,147 @@
+<section class="slide" id="performance-development">
+    <div class="slide-content">
+        <h1 class="text-center mb-4">מדדי פיתוח</h1>
+        
+        <div class="metrics-container">
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <i class="fas fa-forward"></i>
+                    </div>
+                    <div class="metric-details">
+                        <h3>קיצור זמני פיתוח</h3>
+                        <p>הפחתת זמן כתיבת קוד, האצת תהליכי דיבוג ואוטומציה של משימות חוזרות</p>
+                    </div>
+                </div>
+
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <div class="metric-details">
+                        <h3>שיפור בטיפול בבאגים</h3>
+                        <p>זיהוי מהיר של שגיאות, הצעות לתיקונים אוטומטיים וניתוח מעמיק</p>
+                    </div>
+                </div>
+
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="metric-details">
+                        <h3>איכות קוד</h3>
+                        <p>שיפור מבנה הקוד, יעילות ותחזוקתיות קוד לאורך זמן</p>
+                    </div>
+                </div>
+
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="metric-details">
+                        <h3>בדיקות ואימות</h3>
+                        <p>יצירה אוטומטית של בדיקות יחידה ושיפור כיסוי בדיקות</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .metrics-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .metric-item {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .metric-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .metric-icon {
+            background: rgba(0, 154, 223, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #009adf;
+            flex-shrink: 0;
+        }
+
+        .metric-icon i {
+            font-size: 2.5rem;
+            color: #009adf;
+        }
+
+        .metric-details {
+            flex-grow: 1;
+        }
+
+        .metric-details h3 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-details p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        @media (max-width: 1200px) {
+            .metric-details h3 {
+                font-size: 1.75rem;
+            }
+
+            .metric-details p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .metric-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .metric-icon i {
+                font-size: 2rem;
+            }
+
+            .metric-details h3 {
+                font-size: 1.5rem;
+            }
+
+            .metric-details p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</section>

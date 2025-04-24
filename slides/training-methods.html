@@ -1,0 +1,175 @@
+<section class="slide" id="training-methods">
+    <div class="slide-content">
+        <h1 class="text-center mb-4">שיטות הדרכה</h1>
+        
+        <div class="methods-container">
+            <div class="method-grid">
+                <div class="method-item">
+                    <div class="method-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>סדנאות פרונטליות</h3>
+                        <ul class="method-list">
+                            <li>מפגשים אינטראקטיביים</li>
+                            <li>תרגול מעשי בקבוצות קטנות</li>
+                            <li>דוגמאות מעשיות מהשטח</li>
+                            <li>משוב מיידי ולמידה הדדית</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="method-item">
+                    <div class="method-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>משאבי למידה</h3>
+                        <ul class="method-list">
+                            <li>ספריית פרומפטים מובנית</li>
+                            <li>מדריכי שימוש מפורטים</li>
+                            <li>תיעוד וחומרי עזר דיגיטליים</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="method-item">
+                    <div class="method-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>למידה מקוונת</h3>
+                        <ul class="method-list">
+                            <li>מדריכים מוקלטים לצפייה עצמאית</li>
+                            <li>תרגילים ומשימות מעשיות</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="method-item">
+                    <div class="method-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>למידת עמיתים</h3>
+                        <ul class="method-list">
+                            <li>פורומים ודיונים מקצועיים</li>
+                            <li>שיתוף ידע בין צוותים</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .methods-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .method-item {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .method-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .method-icon {
+            background: rgba(0, 154, 223, 0.1);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #009adf;
+            flex-shrink: 0;
+        }
+
+        .method-icon i {
+            font-size: 2rem;
+            color: #009adf;
+        }
+
+        .method-details {
+            flex-grow: 1;
+        }
+
+        .method-details h3 {
+            font-size: 1.75rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .method-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .method-list li {
+            margin-bottom: 0.5rem;
+            padding-right: 1.5rem;
+            position: relative;
+        }
+
+        .method-list li:before {
+            content: "•";
+            color: #009adf;
+            position: absolute;
+            right: 0;
+        }
+
+        @media (max-width: 1200px) {
+            .method-details h3 {
+                font-size: 1.5rem;
+            }
+
+            .method-list {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .method-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .method-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .method-icon i {
+                font-size: 1.75rem;
+            }
+
+            .method-details h3 {
+                font-size: 1.35rem;
+            }
+
+            .method-list {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</section>

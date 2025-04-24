@@ -140,7 +140,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-muted {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.text-white {
+    color: white !important;
 }
 
 .lead {
@@ -1655,13 +1659,6 @@ ul li:before {
 .progress-value,
 .progress-label {
     transform: scaleX(-1);
-}
-
-/* RTL Overrides */
-.container,
-.container-fluid {
-    direction: rtl;
-    text-align: right;
 }
 
 /* Fix Bootstrap RTL Components */

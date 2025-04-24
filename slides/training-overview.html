@@ -1,0 +1,147 @@
+<section class="slide" id="training-overview">
+    <div class="slide-content">
+        <h1 class="text-center mb-4">תוכנית הדרכה והכשרה</h1>
+        
+        <div class="overview-container">
+            <div class="overview-grid">
+                <div class="overview-item" onclick="navigateToSlide('training-methods')">
+                    <div class="overview-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="overview-details">
+                        <h3>שיטות הדרכה</h3>
+                        <p>סדנאות, למידה עצמית וליווי שוטף</p>
+                    </div>
+                </div>
+
+                <div class="overview-item" onclick="navigateToSlide('training-timeline')">
+                    <div class="overview-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="overview-details">
+                        <h3>לוח זמנים</h3>
+                        <p>תוכנית הדרכה מדורגת על פני 8 שבועות</p>
+                    </div>
+                </div>
+
+                <div class="overview-item" onclick="navigateToSlide('training-content')">
+                    <div class="overview-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="overview-details">
+                        <h3>תכני הדרכה</h3>
+                        <p>טכניקות, כלים ושיטות עבודה</p>
+                    </div>
+                </div>
+
+                <div class="overview-item" onclick="navigateToSlide('training-results')">
+                    <div class="overview-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="overview-details">
+                        <h3>תוצאות מצופות</h3>
+                        <p>מדדי הצלחה ויעדי הדרכה</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .overview-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .overview-item {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .overview-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .overview-icon {
+            background: rgba(0, 154, 223, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #009adf;
+            flex-shrink: 0;
+        }
+
+        .overview-icon i {
+            font-size: 2.5rem;
+            color: #009adf;
+        }
+
+        .overview-details {
+            flex-grow: 1;
+        }
+
+        .overview-details h3 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .overview-details p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        @media (max-width: 1200px) {
+            .overview-details h3 {
+                font-size: 1.75rem;
+            }
+
+            .overview-details p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .overview-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .overview-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .overview-icon i {
+                font-size: 2rem;
+            }
+
+            .overview-details h3 {
+                font-size: 1.5rem;
+            }
+
+            .overview-details p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</section>

@@ -1,0 +1,166 @@
+<section class="slide" id="training-results">
+    <div class="slide-content">
+        <h1 class="text-center mb-4">תוצאות מצופות מההדרכה</h1>
+        
+        <div class="results-container">
+            <div class="results-grid">
+                <!-- Skills & Knowledge -->
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="result-content">
+                        <h3>מיומנויות וידע</h3>
+                        <ul class="result-list">
+                            <li>שליטה בטכניקות כתיבת פרומפטים</li>
+                            <li>יכולת לזהות הזדמנויות לשימוש ב-AI</li>
+                            <li>הבנה של מגבלות וסיכונים</li>
+                            <li>שימוש יעיל בכלי AI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Productivity -->
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="result-content">
+                        <h3>פרודוקטיביות</h3>
+                        <ul class="result-list">
+                            <li>קיצור זמני פיתוח ובדיקות</li>
+                            <li>שיפור באיכות הקוד</li>
+                            <li>התייעלות בתהליכי עבודה</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Team Growth -->
+                <div class="result-item">
+                    <div class="result-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="result-content">
+                        <h3>צמיחת הצוות</h3>
+                        <ul class="result-list">
+                            <li>העצמה ושיפור מיומנויות</li>
+                            <li>יצירת תרבות של למידה מתמדת</li>
+                            <li>שיתוף והעברת ידע</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .results-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .result-item {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .result-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .result-icon {
+            background: rgba(0, 154, 223, 0.1);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #009adf;
+            flex-shrink: 0;
+        }
+
+        .result-icon i {
+            font-size: 2rem;
+            color: #009adf;
+        }
+
+        .result-content {
+            flex-grow: 1;
+        }
+
+        .result-content h3 {
+            font-size: 1.75rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .result-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .result-list li {
+            margin-bottom: 0.5rem;
+            padding-right: 1.5rem;
+            position: relative;
+        }
+
+        .result-list li:before {
+            content: "•";
+            color: #009adf;
+            position: absolute;
+            right: 0;
+        }
+
+        @media (max-width: 1200px) {
+            .result-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .result-list {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .result-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .result-icon i {
+                font-size: 1.75rem;
+            }
+
+            .result-content h3 {
+                font-size: 1.35rem;
+            }
+
+            .result-list {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</section>
