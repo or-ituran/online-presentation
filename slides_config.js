@@ -257,11 +257,6 @@ const slides = [
         file: 'slides/implementation-rollout.html'
     },
     {
-        id: 'implementation-roadmap',
-        title: 'מפת דרכים ליישום',
-        file: 'slides/implementation-roadmap.html'
-    },
-    {
         id: 'questions',
         title: 'שאלות ודיון',
         file: 'slides/questions.html'
