@@ -241,31 +241,31 @@ const slides = [
         title: 'מדדי צוות',
         file: 'slides/performance-quality.html'
     },
-    {
-        id: 'slide15',
-        title: 'מבט לעתיד',
-        file: 'slides/future.html'
-    },
-    {
-        id: 'implementation-overview',
-        title: 'מפת דרכים אסטרטגית - סקירה',
-        file: 'slides/implementation-overview.html'
-    },
-    {
-        id: 'implementation-foundation',
-        title: 'שלב 1: תשתית והיערכות',
-        file: 'slides/implementation-foundation.html'
-    },
-    {
-        id: 'implementation-pilot',
-        title: 'שלב 2: פיילוטים ממוקדים',
-        file: 'slides/implementation-pilot.html'
-    },
-    {
-        id: 'implementation-rollout',
-        title: 'שלב 3: הטמעה ארגונית',
-        file: 'slides/implementation-rollout.html'
-    },
+    // {
+    //     id: 'slide15',
+    //     title: 'מבט לעתיד',
+    //     file: 'slides/future.html'
+    // },
+    // {
+    //     id: 'implementation-overview',
+    //     title: 'מפת דרכים אסטרטגית - סקירה',
+    //     file: 'slides/implementation-overview.html'
+    // },
+    // {
+    //     id: 'implementation-foundation',
+    //     title: 'שלב 1: תשתית והיערכות',
+    //     file: 'slides/implementation-foundation.html'
+    // },
+    // {
+    //     id: 'implementation-pilot',
+    //     title: 'שלב 2: פיילוטים ממוקדים',
+    //     file: 'slides/implementation-pilot.html'
+    // },
+    // {
+    //     id: 'implementation-rollout',
+    //     title: 'שלב 3: הטמעה ארגונית',
+    //     file: 'slides/implementation-rollout.html'
+    // },
     {
         id: 'questions',
         title: 'שאלות ודיון',
