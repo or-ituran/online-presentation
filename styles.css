@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans Hebrew', sans-serif;
 }
 
 body {
@@ -631,7 +632,6 @@ ul li:before {
 
 .role-content li {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
 }
 
 .role-content li:last-child {

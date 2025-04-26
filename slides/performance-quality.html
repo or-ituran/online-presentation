@@ -1,130 +1,186 @@
 <section class="slide" id="performance-quality">
     <div class="slide-content">
-        <h1 class="text-center mb-4">מדדי איכות</h1>
-        <div class="metrics-container">
-            <div class="metrics-columns">
-                <div class="metric-section">
-                    <h2><i class="fas fa-check-circle"></i> מדדי איכות</h2>
-                    <div class="metric-card">
-                        <div class="metric-header">
-                            <div class="metric-icon">
-                                <i class="fas fa-shield-check text-primary fa-2x"></i>
-                            </div>
-                            <span class="metric-label">הפחתת באגים</span>
-                        </div>
-                        <ul class="metric-details">
-                            <li>שיפור באיכות הקוד</li>
-                            <li>זיהוי מוקדם של בעיות</li>
-                            <li>עמידה בסטנדרטים</li>
-                        </ul>
+        <h1 class="text-center mb-4">מדדי ביצוע וקריטריוני הצלחה</h1>
+        <div class="content-layout">
+            <div class="roles-container">
+                <div class="role-card">
+                    <div class="role-header">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>איכות ואמינות</h3>
                     </div>
-                    <div class="metric-card">
-                        <div class="metric-header">
-                            <div class="metric-icon">
-                                <i class="fas fa-vial text-primary fa-2x"></i>
-                            </div>
-                            <span class="metric-label">כיסוי בדיקות</span>
-                        </div>
-                        <ul class="metric-details">
-                            <li>יצירת בדיקות אוטומטיות</li>
-                            <li>שיפור איכות הבדיקות</li>
-                            <li>הרחבת כיסוי הבדיקות</li>
+                    <div class="role-content">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>הפחתת באגים</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-vial"></i>
+                                <span>שיפור בכיסוי בדיקות ותהליך הפקת תסריטים​</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-code"></i>
+                                <span>שיפור בדיקת לוגים אוטומטית</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <div class="image-container">
+                <img src="./images/performance-quality.jpeg" alt="Quality Performance" class="quality-image">
+            </div>
         </div>
     </div>
     <style>
-        .metrics-container {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        .metrics-columns {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            justify-items: center;
-        }
-
-        .metric-section {
-            width: 100%;
-            max-width: 600px;
-        }
-
-        .metric-section h2 {
-            color: #009adf;
-            font-size: 1.75rem;
-            margin-bottom: 1.5rem;
+        .content-layout {
             display: flex;
+            gap: 2rem;
             align-items: center;
-            gap: 0.5rem;
         }
 
-        .metric-card {
-            background: rgba(0, 0, 0, 0.2);
+        .roles-container {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .image-container {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .quality-image {
+            max-width: 100%;
+            max-height: 60vh;
             border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 4rem !important;
+            margin-bottom: 2.5rem;
+        }
+
+        .role-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
             transition: transform 0.3s ease;
         }
 
-        .metric-card:hover {
+        .role-card:hover {
             transform: translateY(-5px);
         }
 
-        .metric-header {
+        .role-header {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2rem;
             display: flex;
-            align-items: baseline;
+            align-items: center;
             gap: 1rem;
-            margin-bottom: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 1rem;
         }
 
-        .metric-label {
-            font-size: 1.25rem;
+        .role-header i {
+            font-size: 3rem;
+            color: #009adf;
+        }
+
+        .role-header h3 {
+            margin: 0;
+            font-size: 2.75rem;
             color: white;
         }
 
-        .metric-details {
-            list-style: none;
+        .role-content {
+            padding: 2rem;
+        }
+
+        .feature-list {
+            list-style-type: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
-        .metric-details li {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-            padding-right: 1.5rem;
-            position: relative;
+        .feature-item {
+            background: rgba(0, 0, 0, 0.15);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            transition: all 0.3s ease;
         }
 
-        .metric-details li:before {
-            content: "•";
+        .feature-item:hover {
+            background: rgba(0, 0, 0, 0.25);
+            transform: translateX(-10px);
+        }
+
+        .feature-item i {
             color: #009adf;
-            position: absolute;
-            right: 0;
+            font-size: 2.5rem;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .feature-item span {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.75rem;
         }
 
         @media (max-width: 1200px) {
-            .metric-details li {
-                font-size: 1rem;
+            h1 {
+                font-size: 3.5rem !important;
+            }
+
+            .role-header h3 {
+                font-size: 2.25rem;
+            }
+
+            .feature-item span {
+                font-size: 1.5rem;
             }
         }
 
         @media (max-width: 768px) {
-            .metrics-columns {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
+            .content-layout {
+                flex-direction: column-reverse;
             }
 
-            .metric-section h2 {
-                font-size: 1.5rem;
+            h1 {
+                font-size: 3rem !important;
+            }
+
+            .role-header {
+                padding: 1.5rem;
+            }
+
+            .role-header h3 {
+                font-size: 2rem;
+            }
+
+            .feature-item {
+                padding: 1.25rem;
+            }
+
+            .feature-item span {
+                font-size: 1.25rem;
+            }
+            
+            .quality-image {
+                max-height: 40vh;
+                margin-bottom: 1rem;
             }
         }
     </style>

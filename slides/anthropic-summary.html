@@ -12,14 +12,50 @@
         </div>
 
         <div class="video-container text-center">
-            <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/0j1HqEEDThc" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+            <a href="https://www.youtube.com/watch?v=0j1HqEEDThc" target="_blank" class="video-placeholder">
+                <div class="placeholder-icon">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="placeholder-text">
+                    צפה בסרטון
+                </div>
+            </a>
         </div>
     </div>
 </section>
+
+<style>
+    .video-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 315px;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .video-placeholder:hover {
+        background: rgba(0, 0, 0, 0.4);
+        transform: scale(1.02);
+    }
+    
+    .placeholder-icon {
+        margin-bottom: 1rem;
+    }
+    
+    .placeholder-icon i {
+        font-size: 5rem;
+        color: #ff0000;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .placeholder-text {
+        font-size: 1.5rem;
+        color: white;
+        font-weight: bold;
+    }
+</style>

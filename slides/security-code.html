@@ -1,0 +1,214 @@
+<section class="slide" id="security-code">
+    <div class="slide-content">
+        <h1 class="text-center mb-3">שימוש בטוח בכלי AI</h1>
+        <h2 class="text-center mb-3">סיווג קוד ומזעור מידע</h2>
+        
+        <div class="security-container">
+            <div class="security-content">
+                <div class="measures-grid">
+                    <div class="measure-item">
+                        <div class="measure-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="measure-details">
+                            <h3>סיווג קוד ומידע</h3>
+                            <ul>
+                                <li>הגדרת רמות סיווג ברורות לקוד ומידע לפני שימוש במערכות AI</li>
+                                <li>הסרת מספרי זהות, פרטי קשר וכל פרט של לקוח לפני העלאת דוגמאות לכלי AI</li>
+                            </ul>
+                            <p><strong>דוגמאות לסיווג:</strong></p>
+                            <ol>
+                                <li>קבצי קונפיגורציות המכילים מפתחות וסיסמאות - "רגיש" (אסור להעלות לכלי AI)</li>
+                                <li>מידע של לקוחות - "רגיש" (אסור להעלות לכלי AI)</li>
+                                <li>מבנה בסיס נתונים ארגוני - "פנימי" (מותר לשתף עם Copilot ללא נתונים אמיתיים)</li>
+                                <li>קוד - "פנימי" (מותר לשתף עם Copilot)</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="measure-item">
+                        <div class="measure-icon">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <div class="measure-details">
+                            <h3>מזעור מידע</h3>
+                            <p>העברת מידע מינימלי הכרחי בלבד למערכות AI</p>
+                            <p><strong>דוגמאות:</strong></p>
+                            <ol>
+                                <li>שימוש בנתונים מדגמיים (10 רשומות) במקום מסד נתונים שלם בעת בקשת עזרה מ-AI</li>
+                                <li>הסרת מזהים כמו שמות שרתים, כתובות IP ופרטי התחברות לפני העלאת קוד ל-AI</li>
+                            </ol>
+                            <div class="measure-image">
+                                <img style="width: 280px;" src="./images/security slide 2.png" alt="Security concept image" class="security-slide-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .slide-content {
+            max-width: 95%;
+            padding: 2rem;
+        }
+        
+        .security-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-top: 0.5rem;
+            width: 100%;
+            max-height: 75vh;
+            overflow: visible;
+        }
+
+        h1 {
+            font-size: 3rem !important;
+            margin-bottom: 0.3rem;
+        }
+
+        h2 {
+            font-size: 2rem !important;
+            margin-bottom: 0.5rem;
+        }
+
+        .measures-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .measure-item {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: transform 0.3s ease;
+            height: auto;
+        }
+
+        .measure-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .measure-icon {
+            background: rgba(0, 154, 223, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #009adf;
+            flex-shrink: 0;
+        }
+
+        .measure-icon i {
+            font-size: 1.5rem;
+            color: #009adf;
+        }
+
+        .measure-details {
+            flex-grow: 1;
+        }
+
+        .measure-details h3 {
+            font-size: 1.7rem;
+            color: white;
+            margin-bottom: 0.8rem;
+        }
+
+        .measure-details p {
+            font-size: 1.3rem;
+            color: white;
+            line-height: 1.4;
+            margin: 0;
+            margin-bottom: 0.8rem;
+        }
+
+        .measure-details ul, .measure-details ol {
+            font-size: 1.3rem;
+            color: white;
+            line-height: 1.4;
+            margin-bottom: 0.8rem;
+            padding-right: 1.5rem;
+        }
+
+        .measure-details li {
+            margin-bottom: 0.5rem;
+            color: white !important;
+            border-bottom: none;
+            padding: 0;
+        }
+
+        .security-code .security-content li,
+        #security-code .security-content li,
+        .security-code li,
+        #security-code li,
+        .measure-details ul li,
+        .measure-details ol li {
+            color: white !important;
+            border-bottom: none;
+            padding: 0.3rem 0;
+        }
+
+        .measure-details strong {
+            color: white;
+        }
+
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 2.5rem !important;
+            }
+
+            h2 {
+                font-size: 1.8rem !important;
+            }
+
+            .measure-details h3 {
+                font-size: 1.5rem;
+            }
+
+            .measure-details p, .measure-details ul, .measure-details ol {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .measures-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            h1 {
+                font-size: 2.2rem !important;
+            }
+
+            h2 {
+                font-size: 1.5rem !important;
+            }
+
+            .measure-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .measure-icon i {
+                font-size: 1.2rem;
+            }
+
+            .measure-details h3 {
+                font-size: 1.4rem;
+            }
+
+            .measure-details p, .measure-details ul, .measure-details ol {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</section> 

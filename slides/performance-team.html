@@ -1,146 +1,188 @@
 <section class="slide" id="performance-team">
     <div class="slide-content">
-        <h1 class="text-center mb-4">מדדי צוות</h1>
+        <h1 class="text-center mb-4">מדדי ביצוע וקריטריוני הצלחה</h1>
         
-        <div class="metrics-container">
-            <div class="metrics-grid">
-                <div class="metric-item">
-                    <div class="metric-icon">
-                        <i class="fas fa-chart-line"></i>
+        <div class="content-layout">
+            <div class="roles-container">
+                <div class="role-card">
+                    <div class="role-header">
+                        <i class="fas fa-users"></i>
+                        <h3>יעילות צוותית</h3>
                     </div>
-                    <div class="metric-details">
-                        <h3>שיפור פרודוקטיביות</h3>
-                        <p>העלאת יעילות העבודה, שיפור בתקשורת צוותית והאצת קבלת החלטות</p>
-                    </div>
-                </div>
-
-                <div class="metric-item">
-                    <div class="metric-icon">
-                        <i class="fas fa-smile"></i>
-                    </div>
-                    <div class="metric-details">
-                        <h3>שביעות רצון מפתחים</h3>
-                        <p>הפחתת משימות שגרתיות, העצמת יכולות אישיות ושיפור סביבת העבודה</p>
-                    </div>
-                </div>
-
-                <div class="metric-item">
-                    <div class="metric-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="metric-details">
-                        <h3>למידה והתפתחות</h3>
-                        <p>שיפור מיומנויות צוות, חשיפה לטכנולוגיות חדשות והעשרה מקצועית</p>
+                    <div class="role-content">
+                        <ul class="feature-list">
+                            <li class="feature-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>שיפור בפרודוקטיביות​</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>האצת למידה והכשרה​</span>
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-share-alt"></i>
+                                <span>שיתוף יידע מוגבר</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="metric-item">
-                    <div class="metric-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <div class="metric-details">
-                        <h3>שיתוף פעולה</h3>
-                        <p>שיפור עבודת צוות, שיתוף ידע והעברת מידע יעילה בין חברי הצוות</p>
-                    </div>
-                </div>
+            </div>
+            <div class="image-container">
+                <img src="./images/performance-team.jpeg" alt="Team Performance" class="team-image">
             </div>
         </div>
     </div>
 
     <style>
-        .metrics-container {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        .metric-item {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            padding: 1.5rem;
+        .content-layout {
             display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            transition: transform 0.3s ease;
-            cursor: pointer;
+            gap: 2rem;
+            align-items: center;
         }
 
-        .metric-item:hover {
+        .roles-container {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .image-container {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .team-image {
+            max-width: 100%;
+            max-height: 60vh;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 4rem !important;
+            margin-bottom: 2.5rem;
+        }
+
+        .role-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .role-card:hover {
             transform: translateY(-5px);
         }
 
-        .metric-icon {
-            background: rgba(0, 154, 223, 0.1);
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+        .role-header {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            border: 2px solid #009adf;
-            flex-shrink: 0;
+            gap: 1rem;
         }
 
-        .metric-icon i {
-            font-size: 2.5rem;
+        .role-header i {
+            font-size: 3rem;
             color: #009adf;
         }
 
-        .metric-details {
-            flex-grow: 1;
-        }
-
-        .metric-details h3 {
-            font-size: 2rem;
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-
-        .metric-details p {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.4;
+        .role-header h3 {
             margin: 0;
+            font-size: 2.75rem;
+            color: white;
+        }
+
+        .role-content {
+            padding: 2rem;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .feature-item {
+            background: rgba(0, 0, 0, 0.15);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: rgba(0, 0, 0, 0.25);
+            transform: translateX(-10px);
+        }
+
+        .feature-item i {
+            color: #009adf;
+            font-size: 2.5rem;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .feature-item span {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.75rem;
         }
 
         @media (max-width: 1200px) {
-            .metric-details h3 {
-                font-size: 1.75rem;
+            h1 {
+                font-size: 3.5rem !important;
             }
 
-            .metric-details p {
-                font-size: 1.1rem;
+            .role-header h3 {
+                font-size: 2.25rem;
+            }
+
+            .feature-item span {
+                font-size: 1.5rem;
             }
         }
 
         @media (max-width: 768px) {
-            .metrics-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
+            .content-layout {
+                flex-direction: column-reverse;
             }
 
-            .metric-icon {
-                width: 60px;
-                height: 60px;
+            h1 {
+                font-size: 3rem !important;
             }
 
-            .metric-icon i {
+            .role-header {
+                padding: 1.5rem;
+            }
+
+            .role-header h3 {
                 font-size: 2rem;
             }
 
-            .metric-details h3 {
-                font-size: 1.5rem;
+            .feature-item {
+                padding: 1.25rem;
             }
 
-            .metric-details p {
-                font-size: 1rem;
+            .feature-item span {
+                font-size: 1.25rem;
+            }
+
+            .team-image {
+                max-height: 40vh;
+                margin-bottom: 1rem;
             }
         }
     </style>

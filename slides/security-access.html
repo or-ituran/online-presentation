@@ -1,0 +1,231 @@
+<section class="slide" id="security-access">
+    <div class="slide-content">
+        <h1 class="text-center mb-3">שימוש בטוח בכלי AI</h1>
+        <h2 class="text-center mb-3">בקרת גישה וממשל</h2>
+        
+        <div class="security-container">
+            <div class="security-content">
+                <div class="measures-grid">
+                    <div class="measure-item">
+                        <div class="measure-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div class="measure-details">
+                            <h3>ועדת מדיניות שימוש ב-AI</h3>
+                            <p>תוקם ועדת מדיניות שימוש ב-AI בשיתוף פעולה הדוק עם מחלקת אבטחת מידע והמחלקה המשפטית בחברה</p>
+                        </div>
+                        <div class="measure-image">
+                            <img style="width: 280px;" src="./images/security slide 1.png" alt="Security concept image" class="security-slide-image">
+                        </div>
+                    </div>
+
+                    <div class="measure-item">
+                        <div class="measure-icon">
+                            <i class="fas fa-user-lock"></i>
+                        </div>
+                        <div class="measure-details">
+                            <h3>הגבלת גישה מבוססת תפקידים ומבוססת סביבה</h3>
+                            <ul>
+                                <li>הקצאת הרשאות לכלי AI בהתאם לתפקיד ורמת אחריות</li>
+                                <li>הגדרת מגבלות וכללים ברורים לשימוש ב-AI בסביבות שונות</li>
+                            </ul>
+                            <p><strong>דוגמאות:</strong></p>
+                            <ol>
+                                <li>הצוותים מקבלים גישה רק ל-Copilot בסביבות מבודדות</li>
+                                <li>עובדים חדשים מקבלים גישה לכלי AI רק לאחר הדרכת אבטחה והחתמה על נהלים</li>
+                                <li>כל שימוש בכלי AI מתועד במערכת לוגים מרכזית עם פרטי המשתמש והשאילתות</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="measure-item">
+                        <div class="measure-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="measure-details">
+                            <h3>הדרכה והטמעה</h3>
+                            <ul>
+                                <li>כל עובד יעבור הדרכה על הנהלים הרלוונטים לפני השימוש בכלי AI</li>
+                                <li>כל עובד המשתמש בכלי AI יחתום על הצהרת הבנה והסכמה לנהלים</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="measure-item">
+                        <div class="measure-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="measure-details">
+                            <h3>ניטור שימוש</h3>
+                            <p>מעקב ובקרה שוטפים אחרי הפרות במערכות AI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .slide-content {
+            max-width: 95%;
+            padding: 2rem;
+        }
+        
+        .security-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-top: 0.5rem;
+            width: 100%;
+            max-height: 75vh;
+            overflow: visible;
+        }
+
+        h1 {
+            font-size: 3rem !important;
+            margin-bottom: 0.3rem;
+        }
+
+        h2 {
+            font-size: 2rem !important;
+            margin-bottom: 0.5rem;
+        }
+
+        .measures-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .measure-item {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: transform 0.3s ease;
+            height: auto;
+        }
+
+        .measure-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .measure-icon {
+            background: rgba(0, 154, 223, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #009adf;
+            flex-shrink: 0;
+        }
+
+        .measure-icon i {
+            font-size: 1.5rem;
+            color: #009adf;
+        }
+
+        .measure-details {
+            flex-grow: 1;
+        }
+
+        .measure-details h3 {
+            font-size: 1.7rem;
+            color: white;
+            margin-bottom: 0.8rem;
+        }
+
+        .measure-details p {
+            font-size: 1.3rem;
+            color: white;
+            line-height: 1.4;
+            margin: 0;
+            margin-bottom: 0.8rem;
+        }
+
+        .measure-details ul, .measure-details ol {
+            font-size: 1.3rem;
+            color: white;
+            line-height: 1.4;
+            margin-bottom: 0.8rem;
+            padding-right: 1.5rem;
+        }
+
+        .measure-details li {
+            margin-bottom: 0.5rem;
+            color: white !important;
+            border-bottom: none;
+            padding: 0;
+        }
+
+        .security-access .security-content li,
+        #security-access .security-content li,
+        .security-access li,
+        #security-access li,
+        .measure-details ul li,
+        .measure-details ol li {
+            color: white !important;
+            border-bottom: none;
+            padding: 0.3rem 0;
+        }
+
+        .measure-details strong {
+            color: white;
+        }
+
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 2.5rem !important;
+            }
+
+            h2 {
+                font-size: 1.8rem !important;
+            }
+
+            .measure-details h3 {
+                font-size: 1.5rem;
+            }
+
+            .measure-details p, .measure-details ul, .measure-details ol {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .measures-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            h1 {
+                font-size: 2.2rem !important;
+            }
+
+            h2 {
+                font-size: 1.5rem !important;
+            }
+
+            .measure-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .measure-icon i {
+                font-size: 1.2rem;
+            }
+
+            .measure-details h3 {
+                font-size: 1.4rem;
+            }
+
+            .measure-details p, .measure-details ul, .measure-details ol {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</section> 

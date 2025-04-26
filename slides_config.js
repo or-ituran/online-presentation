@@ -31,11 +31,26 @@ const slides = [
         title: 'שימושי AI למפתחים',
         file: 'slides/use-cases-developers.html'
     },
+    // {
+    //     id: 'slide-refactoring',
+    //     title: 'שימושי AI למפתחים - ריפקטורינג',
+    //     file: 'slides/use-cases-refactoring.html'
+    // },
     {
         id: 'slide-devops-uses',
         title: 'שימושי AI ל-DevOps',
         file: 'slides/use-cases-devops.html'
     },
+    {
+        id: 'slide-tech-support',
+        title: 'שימושי AI לתמיכה טכנית',
+        file: 'slides/use-cases-tech-support.html'
+    },
+    // {
+    //     id: 'slide-tech-support-image',
+    //     title: 'שימושי AI לתמיכה טכנית - תמונה',
+    //     file: 'slides/use-cases-tech-support-image.html'
+    // },
     {
         id: 'slide-qa-uses',
         title: 'שימושי AI ל-QA',
@@ -43,7 +58,7 @@ const slides = [
     },
     {
         id: 'slide-pm-uses',
-        title: 'שימושי AI למנהלי פרויקטים',
+        title: 'שימושי AI למנהלי פרויקטים ומאפיינים',
         file: 'slides/use-cases-pm.html'
     },
     {
@@ -147,55 +162,40 @@ const slides = [
         }
     },
     {
-        id: 'slide14',
-        title: 'מדיניות אבטחה',
-        file: 'slides/security-measures.html'
+        id: 'security-access',
+        title: 'שימוש בטוח בכלי AI - בקרת גישה וממשל',
+        file: 'slides/security-access.html'
     },
     {
-        id: 'security-data-protection',
-        title: 'הגנה על מידע ופרטיות',
-        file: 'slides/security-data-protection.html'
+        id: 'security-code',
+        title: 'שימוש בטוח בכלי AI - סיווג קוד ומזעור מידע',
+        file: 'slides/security-code.html'
     },
     {
-        id: 'security-access-control',
-        title: 'בקרת גישה וממשל',
-        file: 'slides/security-access-control.html'
+        id: 'security-quality',
+        title: 'שימוש בטוח בכלי AI - בקרת איכות וסיכונים',
+        file: 'slides/security-quality.html'
     },
-    {
-        id: 'security-ethical',
-        title: 'שימוש אתי ב-AI',
-        file: 'slides/security-ethical.html'
-    },
-    {
-        id: 'security-critical',
-        title: 'שיקולים קריטיים',
-        file: 'slides/security-critical.html'
-    },
-    {
-        id: 'security-measures',
-        title: 'אמצעי אבטחה שוטפים',
-        file: 'slides/security-measures-ongoing.html'
-    },
-    {
-        id: 'slide15',
-        title: 'מבט לעתיד',
-        file: 'slides/future.html'
-    },
-    {
-        id: 'future-trends',
-        title: 'מגמות והזדמנויות עתידיות',
-        file: 'slides/future-trends.html'
-    },
-    {
-        id: 'future-challenges',
-        title: 'אתגרים צפויים',
-        file: 'slides/future-challenges.html'
-    },
-    {
-        id: 'future-roadmap',
-        title: 'מפת דרכים עתידית',
-        file: 'slides/future-roadmap.html'
-    },
+    // {
+    //     id: 'slide15',
+    //     title: 'מבט לעתיד',
+    //     file: 'slides/future.html'
+    // },
+    // {
+    //     id: 'future-trends',
+    //     title: 'מגמות והזדמנויות עתידיות',
+    //     file: 'slides/future-trends.html'
+    // },
+    // {
+    //     id: 'future-challenges',
+    //     title: 'אתגרים צפויים',
+    //     file: 'slides/future-challenges.html'
+    // },
+    // {
+    //     id: 'future-roadmap',
+    //     title: 'מפת דרכים עתידית',
+    //     file: 'slides/future-roadmap.html'
+    // },
     {
         id: 'training-overview',
         title: 'תוכנית הדרכה והכשרה - סקירה',
@@ -235,6 +235,16 @@ const slides = [
         id: 'performance-team',
         title: 'מדדי צוות',
         file: 'slides/performance-team.html'
+    },
+    {
+        id: 'performance-quality',
+        title: 'מדדי צוות',
+        file: 'slides/performance-quality.html'
+    },
+    {
+        id: 'slide15',
+        title: 'מבט לעתיד',
+        file: 'slides/future.html'
     },
     {
         id: 'implementation-overview',
