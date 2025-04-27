@@ -2,7 +2,11 @@
 <section class="slide" id="slide1">
     <div class="background-image"></div>
     <div class="slide-content">
-        <img src="./logo.svg" alt="Logo" class="logo">
+        <div class="logo-left-container">
+            <img src="./logo-tech.png" alt="Ituran Tech Logo" class="logo-left">
+            <div class="logo-subtitle">Technology powered by people</div>
+        </div>
+        <img src="./logo.svg" alt="Ituran Logo" class="logo-right">
         <h1>בינה מלאכותית בפיתוח תוכנה</h1>
         <h2>שיפור הפרודוקטיביות והחדשנות</h2>
         <p class="subtitle">טרנספורמציה של תהליכי פיתוח באיתוראן טק</p>
@@ -27,11 +31,26 @@
         z-index: 1;
     }
 
-    #slide1 .logo {
-        width: 200px;
-        margin-bottom: 20px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+    #slide1 .logo-left-container {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        text-align: center;
+    }
+
+    #slide1 .logo-left {
+        height: auto;
+    }
+
+    #slide1 .logo-subtitle {
+        font-size: 14px;
+        color: #78819c;
+        margin-top: 5px;
+        font-style: italic;
+    }
+
+    #slide1 .logo-right {
+        right: 20px;
+        width: 300px;
     }
 </style>

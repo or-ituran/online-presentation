@@ -268,7 +268,7 @@ const slides = [
     // },
     {
         id: 'questions',
-        title: 'שאלות ודיון',
+        title: 'Jhonney',
         file: 'slides/questions.html'
     }
 ];
