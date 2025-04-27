@@ -12,20 +12,22 @@ const slides = [
         file: 'slides/agenda.html'
     },
     {
-        id: 'slide3',
-        title: 'מבוא',
-        file: 'slides/introduction.html'
-    },
-    {
         id: 'slide4',
         title: 'Anthropic - דיריקס הופמן',
         file: 'slides/anthropic-summary.html'
     },
     {
+        id: 'slide3',
+        title: 'מבוא',
+        file: 'slides/introduction.html'
+    },
+
+    {
         id: 'slide5',
         title: 'שימושים מרכזיים',
         file: 'slides/use-cases.html'
     },
+  
     {
         id: 'slide-developers',
         title: 'שימושי AI למפתחים',
@@ -65,6 +67,11 @@ const slides = [
         id: 'slide-benefits',
         title: 'יתרונות מרכזיים',
         file: 'slides/use-cases-benefits.html'
+    },
+    {
+        id: 'slide-ai-video',
+        title: 'כיצד AI עוזר למתכנתים - סרטון',
+        file: 'slides/ai-video-summary.html'
     },
     {
         id: 'demo-daniel',
