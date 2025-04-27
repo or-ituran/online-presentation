@@ -12,10 +12,21 @@ const slides = [
         file: 'slides/agenda.html'
     },
     {
+        id: 'fortran-slide',
+        title: 'FORTRAN Punch Card',
+        file: 'slides/fortran-slide.html'
+    },
+    {
         id: 'slide4',
         title: 'Anthropic - דיריקס הופמן',
         file: 'slides/anthropic-summary.html'
     },
+    {
+        id: 'jets-slide',
+        title: 'Military Jets',
+        file: 'slides/jets-slide.html'
+    },
+    
     {
         id: 'slide3',
         title: 'מבוא',
