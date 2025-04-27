@@ -35,35 +35,74 @@
             </div>
         </div>
         
-        <ul class="list-unstyled mt-4">
-            <li>
-                <i class="fas fa-tasks me-2" style="color: #009adf;"></i>
-                יצירת תרחישי בדיקה מאיפיון פונקציונלי וטכני
-            </li>
-            <li>
-                <i class="fas fa-sync me-2" style="color: #009adf;"></i>
-                שיפור בדיקות רגרסיה ושפיות
-            </li>
-            <li>
-                <i class="fas fa-search me-2" style="color: #009adf;"></i>
-                ניתוח לוגים וזיהוי בעיות אוטומטי
-            </li>
-            <li>
-                <i class="fas fa-tachometer-alt me-2" style="color: #009adf;"></i>
-                זיהוי צווארי בקבוק בביצועים
-            </li>
-            <li>
-                <i class="fas fa-bug me-2" style="color: #009adf;"></i>
-                חיזוי באגים פוטנציאלים
-            </li>
-            <li>
-                <i class="fas fa-robot me-2" style="color: #009adf;"></i>
-                יצירת בדיקות אוטומטיות
-            </li>
-            <li>
-                <i class="fas fa-file-alt me-2" style="color: #009adf;"></i>
-                הפקת מסמכי גרסה ודוחות בדיקה
-            </li>
-        </ul>
+        <div class="capabilities-grid">
+            <div class="capability-item">
+                <i class="fas fa-tasks" style="color: #009adf;"></i>
+                <span>יצירת תרחישי בדיקה מאיפיון פונקציונלי וטכני</span>
+            </div>
+            <div class="capability-item">
+                <i class="fas fa-sync" style="color: #009adf;"></i>
+                <span>שיפור בדיקות רגרסיה ושפיות</span>
+            </div>
+            <div class="capability-item">
+                <i class="fas fa-search" style="color: #009adf;"></i>
+                <span>ניתוח לוגים וזיהוי בעיות אוטומטי</span>
+            </div>
+            <div class="capability-item">
+                <i class="fas fa-tachometer-alt" style="color: #009adf;"></i>
+                <span>זיהוי צווארי בקבוק בביצועים</span>
+            </div>
+            <div class="capability-item">
+                <i class="fas fa-bug" style="color: #009adf;"></i>
+                <span>חיזוי באגים פוטנציאלים</span>
+            </div>
+            <div class="capability-item">
+                <i class="fas fa-robot" style="color: #009adf;"></i>
+                <span>יצירת בדיקות אוטומטיות</span>
+            </div>
+            <div class="capability-item">
+                <i class="fas fa-file-alt" style="color: #009adf;"></i>
+                <span>הפקת מסמכי גרסה ודוחות בדיקה</span>
+            </div>
+        </div>
     </div>
+
+    <style>
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .capability-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .capability-item i {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .capability-item span {
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 992px) {
+            .capabilities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </section>

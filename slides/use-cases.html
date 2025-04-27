@@ -23,6 +23,14 @@
                 <p>כלי AI לאוטומציה וניהול תשתיות</p>
             </div>
 
+            <div class="role-preview" data-slide="slide-tech-support">
+                <div class="role-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>תמיכה טכנית</h3>
+                <p>כלי AI לאבחון תקלות ומתן מענה מהיר</p>
+            </div>
+
             <div class="role-preview" data-slide="slide-qa-uses">
                 <div class="role-icon">
                     <i class="fas fa-check-circle"></i>
@@ -61,7 +69,7 @@
 
         .roles-overview {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
             padding: 1rem;
             max-width: 1200px;
@@ -126,6 +134,12 @@
 
             .role-preview p {
                 font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .roles-overview {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 

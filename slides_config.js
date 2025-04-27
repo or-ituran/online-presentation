@@ -176,26 +176,7 @@ const slides = [
         title: 'שימוש בטוח בכלי AI - בקרת איכות וסיכונים',
         file: 'slides/security-quality.html'
     },
-    // {
-    //     id: 'slide15',
-    //     title: 'מבט לעתיד',
-    //     file: 'slides/future.html'
-    // },
-    // {
-    //     id: 'future-trends',
-    //     title: 'מגמות והזדמנויות עתידיות',
-    //     file: 'slides/future-trends.html'
-    // },
-    // {
-    //     id: 'future-challenges',
-    //     title: 'אתגרים צפויים',
-    //     file: 'slides/future-challenges.html'
-    // },
-    // {
-    //     id: 'future-roadmap',
-    //     title: 'מפת דרכים עתידית',
-    //     file: 'slides/future-roadmap.html'
-    // },
+
     {
         id: 'training-overview',
         title: 'תוכנית הדרכה והכשרה - סקירה',
@@ -226,11 +207,7 @@ const slides = [
         title: 'מדדי פיתוח ואיכות',
         file: 'slides/performance-development.html'
     },
-    {
-        id: 'performance-innovation',
-        title: 'מדדי חדשנות',
-        file: 'slides/performance-innovation.html'
-    },
+   
     {
         id: 'performance-team',
         title: 'מדדי צוות',
@@ -241,34 +218,14 @@ const slides = [
         title: 'מדדי צוות',
         file: 'slides/performance-quality.html'
     },
-    // {
-    //     id: 'slide15',
-    //     title: 'מבט לעתיד',
-    //     file: 'slides/future.html'
-    // },
-    // {
-    //     id: 'implementation-overview',
-    //     title: 'מפת דרכים אסטרטגית - סקירה',
-    //     file: 'slides/implementation-overview.html'
-    // },
-    // {
-    //     id: 'implementation-foundation',
-    //     title: 'שלב 1: תשתית והיערכות',
-    //     file: 'slides/implementation-foundation.html'
-    // },
-    // {
-    //     id: 'implementation-pilot',
-    //     title: 'שלב 2: פיילוטים ממוקדים',
-    //     file: 'slides/implementation-pilot.html'
-    // },
-    // {
-    //     id: 'implementation-rollout',
-    //     title: 'שלב 3: הטמעה ארגונית',
-    //     file: 'slides/implementation-rollout.html'
-    // },
+    {
+        id: 'performance-innovation',
+        title: 'מדדי חדשנות',
+        file: 'slides/performance-innovation.html'
+    },
     {
         id: 'questions',
-        title: 'Jhonney',
+        title: 'Johnney',
         file: 'slides/questions.html'
     }
 ];
