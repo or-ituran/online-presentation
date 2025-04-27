@@ -1,7 +1,7 @@
 <!-- Title Slide -->
 <section class="slide" id="slide1">
     <div class="background-image"></div>
-    <div class="slide-content">
+    <div class="slide-content-title">
         <div class="logo-left-container">
             <img src="./logo-tech.png" alt="Ituran Tech Logo" class="logo-left">
         </div>
@@ -25,9 +25,14 @@
         z-index: 0;
     }
 
-    #slide1 .slide-content {
+    #slide1 .slide-content-title {
         position: relative;
         z-index: 1;
+        width: 100%;
+    margin: 0 auto;
+    padding: 3rem;
+    direction: rtl;
+    text-align: right;
     }
 
     #slide1 .logo-left-container {
@@ -35,7 +40,7 @@
         top: 20px;
         left: 20px;
         text-align: center;
-        background-color: rgba(255, 255, 255, 0.9);
+        /* background-color: rgba(255, 255, 255, 0.9); */
         /* padding: 12px; */
         /* border-radius: 50%; */
         /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); */
@@ -43,11 +48,13 @@
 
     #slide1 .logo-left {
         height: auto;
-        width: 100px;
+        width: 150px;
+        left: 40px;
+        margin-left: 20px;
     }
 
     #slide1 .logo-right {
-        right: 20px;
+        right: 40px;
         width: 300px;
     }
 </style>

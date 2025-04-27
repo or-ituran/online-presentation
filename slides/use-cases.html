@@ -6,45 +6,49 @@
             <p class="lead">שילוב AI בתהליכי העבודה של צוותי הפיתוח השונים</p>
         </div>
 
-        <div class="roles-overview">
-            <div class="role-preview" data-slide="slide-developers">
-                <div class="role-icon">
-                    <i class="fas fa-laptop-code"></i>
+        <div class="roles-container">
+            <div class="roles-row-top">
+                <div class="role-preview" data-slide="slide-developers">
+                    <div class="role-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>מפתחי תוכנה</h3>
+                    <p>פתרונות AI לשיפור יעילות הפיתוח ואיכות הקוד</p>
                 </div>
-                <h3>מפתחי תוכנה</h3>
-                <p>פתרונות AI לשיפור יעילות הפיתוח ואיכות הקוד</p>
+
+                <div class="role-preview" data-slide="slide-devops-uses">
+                    <div class="role-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>מהנדסי DevOps</h3>
+                    <p>כלי AI לאוטומציה וניהול תשתיות</p>
+                </div>
+
+                <div class="role-preview" data-slide="slide-tech-support">
+                    <div class="role-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>תמיכה טכנית</h3>
+                    <p>כלי AI לאבחון תקלות ומתן מענה מהיר</p>
+                </div>
             </div>
 
-            <div class="role-preview" data-slide="slide-devops-uses">
-                <div class="role-icon">
-                    <i class="fas fa-server"></i>
+            <div class="roles-row-bottom">
+                <div class="role-preview" data-slide="slide-qa-uses">
+                    <div class="role-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>מהנדסי QA</h3>
+                    <p>פתרונות AI לבדיקות ואבטחת איכות</p>
                 </div>
-                <h3>מהנדסי DevOps</h3>
-                <p>כלי AI לאוטומציה וניהול תשתיות</p>
-            </div>
 
-            <div class="role-preview" data-slide="slide-tech-support">
-                <div class="role-icon">
-                    <i class="fas fa-headset"></i>
+                <div class="role-preview" data-slide="slide-pm-uses">
+                    <div class="role-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>מנהלי פרויקטים</h3>
+                    <p>כלי AI לניהול פרויקטים ותכנון</p>
                 </div>
-                <h3>תמיכה טכנית</h3>
-                <p>כלי AI לאבחון תקלות ומתן מענה מהיר</p>
-            </div>
-
-            <div class="role-preview" data-slide="slide-qa-uses">
-                <div class="role-icon">
-                    <i class="fas fa-check-circle"></i>
-                </div>
-                <h3>מהנדסי QA</h3>
-                <p>פתרונות AI לבדיקות ואבטחת איכות</p>
-            </div>
-
-            <div class="role-preview" data-slide="slide-pm-uses">
-                <div class="role-icon">
-                    <i class="fas fa-project-diagram"></i>
-                </div>
-                <h3>מנהלי פרויקטים</h3>
-                <p>כלי AI לניהול פרויקטים ותכנון</p>
             </div>
         </div>
     </div>
@@ -67,13 +71,27 @@
             margin-bottom: 1rem;
         }
 
-        .roles-overview {
+        .roles-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .roles-row-top {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
-            padding: 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            width: 100%;
+        }
+
+        .roles-row-bottom {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            width: 100%;
         }
 
         .role-preview {
@@ -138,16 +156,15 @@
         }
 
         @media (max-width: 992px) {
-            .roles-overview {
+            .roles-row-top, .roles-row-bottom {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 768px) {
-            .roles-overview {
+            .roles-row-top, .roles-row-bottom {
                 grid-template-columns: 1fr;
                 gap: 1rem;
-                padding: 0.75rem;
             }
 
             h1 {

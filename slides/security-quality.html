@@ -2,57 +2,84 @@
     <div class="slide-content">
         <h1 class="text-center mb-3">שימוש בטוח בכלי AI</h1>
         <h2 class="text-center mb-3">בקרת איכות וסיכונים</h2>
-        
-        <div class="security-container">
-            <div class="security-content">
-                <div class="measures-grid">
-                    <div class="measure-item">
-                        <div class="measure-icon">
-                            <i class="fas fa-tasks"></i>
-                        </div>
-                        <div class="measure-details">
-                            <h3>בקרת איכות קפדנית על תוצרי AI</h3>
-                            <p>חובה לסקור את התוצרים (קוד, איפיונים וכדו') של כלי AI לפני שילובם במערכות החברה</p>
-                            <p>בדיקת ספריות וחבילות שה-AI המליץ עליהן מול רשימת חבילות מוכרות ובשימושנו</p>
-                            <p><strong>דוגמאות:</strong></p>
-                            <ol>
-                                <li>מפתח חייב לסקור את כל הקוד שנוצר ע"י AI לפני מיזוג הקוד</li>
-                                <li>איש DBA יבדוק סקריפטים מורכבים שנוצרו ע"י AI</li>
-                                <li>בדיקת ספריות וחבילות שה-AI המליץ עליהן מול רשימת חבילות מאושרות ועדכניות</li>
-                                <li>הרצת סורק אבטחה אוטומטי על כל הקוד לזיהוי חולשות אבטחה</li>
-                            </ol>
-                        </div>
-                    </div>
 
-                    <div class="measure-item">
-                        <div class="measure-icon">
-                            <i class="fas fa-exclamation-triangle"></i>
+        <div class="security-flex">
+            <div class="security-container">
+                <div class="security-content">
+                    <div class="measures-grid">
+                        <div class="measure-item">
+                            <div class="measure-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="measure-details">
+                                <h3>בקרת איכות קפדנית על תוצרי AI</h3>
+                                <p>חובה לסקור את התוצרים (קוד, איפיונים וכדו') של כלי AI לפני שילובם במערכות החברה</p>
+                                <p>בדיקת ספריות וחבילות שה-AI המליץ עליהן מול רשימת חבילות מוכרות ובשימושנו</p>
+                                <p><strong>דוגמאות:</strong></p>
+                                <ol>
+                                    <li>מפתח חייב לסקור את כל הקוד שנוצר ע"י AI לפני מיזוג הקוד</li>
+                                    <li>איש DBA יבדוק סקריפטים מורכבים שנוצרו ע"י AI</li>
+                                    <li>בדיקת ספריות וחבילות שה-AI המליץ עליהן מול רשימת חבילות מאושרות ועדכניות</li>
+                                    <li>הרצת סורק אבטחה אוטומטי על כל הקוד לזיהוי חולשות אבטחה</li>
+                                </ol>
+                            </div>
                         </div>
-                        <div class="measure-details">
-                            <h3>סכנות פוטנציאליות באי-ציות לנוהל</h3>
-                            <ol>
-                                <li>דליפת מידע רגיש</li>
-                                <li>הפרת קניין רוחני</li>
-                                <li>הפרת פרטיות לקוחות</li>
-                                <li>אובדן יתרון תחרותי</li>
-                                <li>הפרת הסכמי סודיות</li>
-                                <li>סיכוני אבטחה מוגברים</li>
-                                <li>נזק כלכלי לחברה</li>
-                            </ol>
+
+                        <div class="measure-item">
+                            <div class="measure-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="measure-details">
+                                <h3>סכנות פוטנציאליות באי-ציות לנוהל</h3>
+                                <ol>
+                                    <li>דליפת מידע רגיש</li>
+                                    <li>הפרת קניין רוחני</li>
+                                    <li>הפרת פרטיות לקוחות</li>
+                                    <li>אובדן יתרון תחרותי</li>
+                                    <li>הפרת הסכמי סודיות</li>
+                                    <li>סיכוני אבטחה מוגברים</li>
+                                    <li>נזק כלכלי לחברה</li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="measure-image measure-image-outside">
+                <img style="width: 420px; border-radius: 15px;" src="./images/security slide 3.jpg"
+                    alt="Security concept image" class="security-slide-image">
             </div>
         </div>
     </div>
 
     <style>
-        .slide-content {
+        #security-quality .slide-content {
             max-width: 95%;
             padding: 2rem;
         }
-        
-        .security-container {
+
+        .security-container ul li:before {
+            right: -20px;
+            left: auto;
+        }
+
+        #security-quality .security-flex {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        #security-quality .security-image {
+            width: 220px;
+            max-width: 30vw;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+            background: #fff;
+        }
+
+        #security-quality .security-container {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 1.5rem;
@@ -62,24 +89,24 @@
             overflow: visible;
         }
 
-        h1 {
+        #security-quality h1 {
             font-size: 3rem !important;
             margin-bottom: 0.3rem;
         }
 
-        h2 {
+        #security-quality h2 {
             font-size: 2rem !important;
             margin-bottom: 0.5rem;
         }
 
-        .measures-grid {
+        #security-quality .measures-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             width: 100%;
         }
 
-        .measure-item {
+        #security-quality .measure-item {
             background: rgba(0, 0, 0, 0.2);
             border-radius: 12px;
             padding: 1rem;
@@ -90,11 +117,11 @@
             height: auto;
         }
 
-        .measure-item:hover {
+        #security-quality .measure-item:hover {
             transform: translateY(-3px);
         }
 
-        .measure-icon {
+        #security-quality .measure-icon {
             background: rgba(0, 154, 223, 0.1);
             width: 50px;
             height: 50px;
@@ -106,22 +133,22 @@
             flex-shrink: 0;
         }
 
-        .measure-icon i {
+        #security-quality .measure-icon i {
             font-size: 1.5rem;
             color: #009adf;
         }
 
-        .measure-details {
+        #security-quality .measure-details {
             flex-grow: 1;
         }
 
-        .measure-details h3 {
+        #security-quality .measure-details h3 {
             font-size: 1.7rem;
             color: white;
             margin-bottom: 0.8rem;
         }
 
-        .measure-details p {
+        #security-quality .measure-details p {
             font-size: 1.3rem;
             color: white;
             line-height: 1.4;
@@ -129,7 +156,8 @@
             margin-bottom: 0.8rem;
         }
 
-        .measure-details ul, .measure-details ol {
+        #security-quality .measure-details ul,
+        #security-quality .measure-details ol {
             font-size: 1.3rem;
             color: white;
             line-height: 1.4;
@@ -137,76 +165,95 @@
             padding-right: 1.5rem;
         }
 
-        .measure-details li {
+        #security-quality .measure-details li {
             margin-bottom: 0.5rem;
             color: white !important;
             border-bottom: none;
             padding: 0;
         }
 
-        .security-quality .security-content li,
         #security-quality .security-content li,
-        .security-quality li,
         #security-quality li,
-        .measure-details ul li,
-        .measure-details ol li {
+        #security-quality .measure-details ul li,
+        #security-quality .measure-details ol li {
             color: white !important;
             border-bottom: none;
             padding: 0.3rem 0;
         }
 
-        .measure-details strong {
+        #security-quality .measure-details strong {
             color: white;
         }
 
         @media (max-width: 1200px) {
-            h1 {
+            #security-quality h1 {
                 font-size: 2.5rem !important;
             }
 
-            h2 {
+            #security-quality h2 {
                 font-size: 1.8rem !important;
             }
 
-            .measure-details h3 {
+            #security-quality .measure-details h3 {
                 font-size: 1.5rem;
             }
 
-            .measure-details p, .measure-details ul, .measure-details ol {
+            #security-quality .measure-details p,
+            #security-quality .measure-details ul,
+            #security-quality .measure-details ol {
                 font-size: 1.2rem;
+            }
+
+            #security-quality .security-image {
+                width: 150px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            #security-quality .security-flex {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            #security-quality .security-image {
+                max-width: 100%;
+                margin-bottom: 1rem;
+                width: 100%;
             }
         }
 
         @media (max-width: 768px) {
-            .measures-grid {
+            #security-quality .measures-grid {
                 grid-template-columns: 1fr;
                 gap: 1rem;
             }
 
-            h1 {
+            #security-quality h1 {
                 font-size: 2.2rem !important;
             }
 
-            h2 {
+            #security-quality h2 {
                 font-size: 1.5rem !important;
             }
 
-            .measure-icon {
+            #security-quality .measure-icon {
                 width: 40px;
                 height: 40px;
             }
 
-            .measure-icon i {
+            #security-quality .measure-icon i {
                 font-size: 1.2rem;
             }
 
-            .measure-details h3 {
+            #security-quality .measure-details h3 {
                 font-size: 1.4rem;
             }
 
-            .measure-details p, .measure-details ul, .measure-details ol {
+            #security-quality .measure-details p,
+            #security-quality .measure-details ul,
+            #security-quality .measure-details ol {
                 font-size: 1.1rem;
             }
         }
     </style>
-</section> 
+</section>
